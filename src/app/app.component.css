@@ -1,0 +1,46 @@
+*{
+  box-sizing: border-box;
+}
+
+
+
+.toolbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  position: absolute;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+.title{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Responsive Styles */
+ @media screen and (max-width: 767px) {
+
+ }
+
+  @media screen and (max-width: 575px) {
+  }
