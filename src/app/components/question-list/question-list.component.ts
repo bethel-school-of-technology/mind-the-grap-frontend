@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Question } from '../models/question';
+import { Question } from '../../models/question';
 
 @Component({
   selector: 'app-question-list',
