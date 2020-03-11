@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Question } from '../models/question';
+import { Question } from '../../models/question';
 
 @Component({
   selector: 'app-questions',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Login } from '../models/login';
+import { Login } from '../../models/login';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
