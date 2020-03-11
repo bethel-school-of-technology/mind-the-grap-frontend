@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 import { QuestionListComponent } from '../app/question-list/question-list.component';
 import { QuestionsComponent } from '../app/questions/questions.component';
 import { SignUpComponent } from '../app/sign-up/sign-up.component';
@@ -17,6 +18,9 @@ const routes: Routes = [
   {
     path: 'question/:id',
     component: QuestionsComponent
+  },
+  {
+    path:'login', component: LoginComponent
   },
 
   // for landing page once it is wired up.
