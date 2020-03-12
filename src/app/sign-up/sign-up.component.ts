@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user';
+import { FormsModule} from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 
 @Component({
@@ -12,7 +14,7 @@ export class SignUpComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 //added console log for User 03.08.20//
   onSubmit() {
