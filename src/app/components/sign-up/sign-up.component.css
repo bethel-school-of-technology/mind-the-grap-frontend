@@ -1,3 +1,13 @@
 p {
     color:rosybrown; 
+    padding-left: 50px;
 }
+
+div { 
+    color:black;
+    text-align: center;
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+

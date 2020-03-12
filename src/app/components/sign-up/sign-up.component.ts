@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD:src/app/sign-up/sign-up.component.ts
+import { User } from '../models/user';
+import { FormsModule} from '@angular/forms';
+import { NgModule } from '@angular/core';
+=======
 import { User } from '../../models/user';
+>>>>>>> master:src/app/components/sign-up/sign-up.component.ts
 
 
 @Component({
@@ -12,7 +18,7 @@ export class SignUpComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 //added console log for User 03.08.20//
   onSubmit() {
