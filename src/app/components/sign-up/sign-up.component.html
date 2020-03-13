@@ -1,6 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="home">Mind The Gap</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link"  routerLink="/home" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+    </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
 <form (ngSubmit)="onSubmit()"> 
     <fieldset>
-      <legend>Legend</legend>
       <div class="form-group">
         <label for="exampleInputEmail1">First Name</label>
         <input type="firstName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter First Name">
@@ -27,7 +56,7 @@
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
       </div>
       <div>
-        <button type="submit" class="btn btn-success">Success</button>
+        <button type="submit" class="btn btn-success">Submit</button>
       </div>
     </fieldset>
 </form>

@@ -3,11 +3,14 @@ p {
     padding-left: 50px;
 }
 
-div { 
+form div { 
     color:black;
     text-align: center;
     padding-left: 35%;
     padding-right: 35%;
+}
+nav{
+    margin-bottom: 5%;
 }
 
 
