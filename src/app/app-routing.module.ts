@@ -5,6 +5,8 @@ import { LoginComponent } from './components/login/login.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
@@ -22,6 +24,17 @@ const routes: Routes = [
   {
     path:'login', component: LoginComponent
   },
+  // Home-Landing Page
+  {
+    path:'home', component: HomeComponent
+  },
+  {
+    path: ' ',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  
+ 
 
   // for landing page once it is wired up.
   // {

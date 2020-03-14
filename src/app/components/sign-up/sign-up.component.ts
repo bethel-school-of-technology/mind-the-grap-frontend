@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
 import { FormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { User } from '../../models/user';
 
 
 @Component({
@@ -22,3 +22,4 @@ export class SignUpComponent implements OnInit {
 }
 
 }
+
