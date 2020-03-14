@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Question } from '../../models/question';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-question-list',
@@ -10,27 +11,30 @@ import { Question } from '../../models/question';
   styleUrls: ['./question-list.component.css']
 })
 export class QuestionListComponent implements OnInit {
+  @Input() question: Question;
+  @Output() questionAnswer: EventEmitter<any> = new EventEmitter();
+  private questionsRoute: ApiService; 
+  public model: Question;
+
+  Question:any = [];
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private http: HttpClient
-    ) { }
+    private http: HttpClient,
+    private apiService: ApiService
+    ) {
+      this.readQuestion();
+     }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    
   }
 
-  //this code wont work unitl backend is working
-  // getQuestion() {
-  //   const id = +this.route.snapshot.paramMap.get('id');
-  //   console.log("id:" + id);
-  //   this.http.get(this.questionsRoute + '/' + id).subscribe(question => {
-  //     this.model = question as Question;
-  //     console.log('Question', this.model);
-  //   })
-  // }
-
-  goBack() {
-    this.location.back();
+  readQuestion(){
+    this.apiService.getQuestions().subscribe((data) => {
+      this.Question = data;
+    })
   }
+ 
 }

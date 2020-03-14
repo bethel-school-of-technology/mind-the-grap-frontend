@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Question } from '../../models/question';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-questions',
@@ -8,19 +9,18 @@ import { Question } from '../../models/question';
   styleUrls: ['./questions.component.css']
 })
 export class QuestionsComponent implements OnInit {
+  Question:any = [];
   
-  constructor() { }
+  constructor(
+    private apiService: ApiService
+  ) {this.readQuestion }
 
-  ngOnInit() {
-    // this.getQuestions();
+  ngOnInit() { }
+
+  readQuestion(){
+    this.apiService.getQuestions().subscribe((data) => {
+      this.Question = data;
+    })
   }
-
-  //this code wont work unitl backend is working
-  // getQuestions() {
-  //   this.http.get(Question[]>(this.questionsRoute).subscribe(questions => {
-  //     this.questions = questions;
-  //   }))
-  // }
-
 
 }
