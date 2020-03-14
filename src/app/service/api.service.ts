@@ -3,11 +3,12 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  endpoint: string = 'http://localhost:5000';
+  endpoint:string = 'http://localhost:5000';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
@@ -23,7 +24,10 @@ export class ApiService {
       )
   }
 
-  
+  // Get Questions
+  getQuestions() {
+    return this.http.get(`${this.endpoint}`);
+  }
 
 
   // Error handling

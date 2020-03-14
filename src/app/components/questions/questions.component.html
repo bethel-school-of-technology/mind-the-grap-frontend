@@ -1,5 +1,21 @@
-<!--  <div>
-    <h1>Choose the question that best describes you currently.</h1>
-
-     <app-question-list *ngFor="let question of questions" [question]="question" ></app-question-list>
-</div> -->
+<div>
+    <form>
+        <p> Answer: {{model.name}}</p>
+    
+        <label><input type="checkbox" name="{{model.id}}" value="c1"> 
+            {{model.answer1}}
+         </label>
+        <label><input type="checkbox" name="{{model.id}}" value="c2"> 
+            {{model.answer2}}
+        </label>
+        <label><input type="checkbox" name="{{model.id}}" value="c3">
+            {{model.answer3}}
+            </label>
+        <label><input type="checkbox" name="{{model.id}}" value="c4">
+            {{model.answer4}}
+            </label>
+        <label><input type="checkbox" name="{{model.id}}" value="c4">
+            {{model.answer5}}
+            </label>
+    </form>
+</div>
