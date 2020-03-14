@@ -9,6 +9,7 @@ import { QuestionListComponent } from './components/question-list/question-list.
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { LoginComponent } from './components/login/login.component';
+import { ApiService } from './service/api.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { LoginComponent } from './components/login/login.component';
     FormsModule,
     
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

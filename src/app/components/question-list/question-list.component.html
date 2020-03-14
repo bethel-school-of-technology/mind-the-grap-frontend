@@ -1,13 +1,6 @@
-<p>question-list works!</p>
 <div>
-    <ul>
-        <li>
-            <span>
-                <a {{question.title}}></a>
-            </span>
-        </li>
-    </ul>
-
-    <button (click)="goBack()">Go Back</button>
+    <h1>Choose the statement that best describes you currently. </h1>    
+   
+    <app-questions *ngFor="let question of Question" [question]="question"></app-questions>
 </div>
 
