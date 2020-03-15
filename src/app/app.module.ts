@@ -9,7 +9,7 @@ import { QuestionListComponent } from './components/question-list/question-list.
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { LoginComponent } from './components/login/login.component';
-import { ApiService } from './service/api.service';
+import { ApiService} from './service/api.service';
 
 @NgModule({
   declarations: [
@@ -18,11 +18,10 @@ import { ApiService } from './service/api.service';
     SignUpComponent,
     QuestionsComponent,
     LoginComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule, 
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     
