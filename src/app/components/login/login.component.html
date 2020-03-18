@@ -10,10 +10,10 @@
           <a class="nav-link"  routerLink="/home" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="about" routerLink="/about" routerLinkActive="active">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="contact" routerLink="/contact" routerLinkActive="active">Contact</a>
         </li>
         <li class="nav-item">
           <a class="nav-link"  routerLink="/login" routerLinkActive="active">Login</a>
@@ -34,8 +34,12 @@
       </div>
     </fieldset>
     <div>
-        <button type="submit" class="btn btn-success">Log in</button>
+        <button type="submit" id="login" class="btn btn-success">Log in</button>
     </div>
+    <div>
+      Don't have an account?
+    </div>
+    <div class="arrow"> &#8609;</div>
     <div>
         <a class="btn" routerLink="/signUp" routerLinkActive="active">Sign Up</a>
     </div>

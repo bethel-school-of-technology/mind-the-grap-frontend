@@ -7,3 +7,13 @@ form div {
 nav{
     margin-bottom: 5%;
 }
+.arrow{
+    font-size: 30px;
+    font-weight: 400;
+}
+ #login {
+    border-radius: 5px;
+}
+input{
+    border-radius: 5px;
+}
