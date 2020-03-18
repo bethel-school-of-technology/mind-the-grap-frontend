@@ -7,6 +7,8 @@ import { QuestionsComponent } from './components/questions/questions.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 const routes: Routes = [
@@ -22,26 +24,30 @@ const routes: Routes = [
     component: QuestionsComponent
   },
   {
-    path:'login', component: LoginComponent
+    path: 'login', 
+    component: LoginComponent
   },
   // Home-Landing Page
   {
-    path:'home', component: HomeComponent
+    path: 'home', 
+    component: HomeComponent
   },
   {
     path: ' ',
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  
- 
+  //About Page
+  {
+    path: 'about', 
+    component: AboutComponent
+  },
+  //Contact Page
+  {
+    path: 'contact', 
+    component: ContactComponent
+  }
 
-  // for landing page once it is wired up.
-  // {
-  //   path: '',
-  //   redirectTo: '/landing', 
-  //   pathMatch: 'full'
-  // }
 ];
 
 @NgModule({

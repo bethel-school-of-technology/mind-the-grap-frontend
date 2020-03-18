@@ -10,6 +10,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { LoginComponent } from './components/login/login.component';
 import { ApiService} from './service/api.service';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { ApiService} from './service/api.service';
     SignUpComponent,
     QuestionsComponent,
     LoginComponent,
+    AboutComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

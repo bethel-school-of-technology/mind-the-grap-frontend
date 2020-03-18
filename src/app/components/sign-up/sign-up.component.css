@@ -12,5 +12,13 @@ form div {
 nav{
     margin-bottom: 5%;
 }
-
+input{
+    border-radius: 5px;
+}
+#signUp{
+    border-radius: 5px;
+}
+form{
+    margin-bottom: 50px;
+}
 
