@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ApiService} from './service/api.service';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,8 @@ import { ContactComponent } from './components/contact/contact.component';
     LoginComponent,
     AboutComponent,
     ContactComponent,
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
