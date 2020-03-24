@@ -10,25 +10,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { LoginComponent } from './components/login/login.component';
 import { ApiService} from './service/api.service';
-//Google + FaceBook SignIn // 
-import { GoogleLoginProvider, FacebookLoginProvider, AuthService } from 'angularx-social-login';  
-import { SocialLoginModule, AuthServiceConfig } from 'angularx-social-login';
-
-//Google + FaceBook SignIn // 
-const config = new AuthServiceConfig([
-  {
-    id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider("Google-OAuth-Client-Id")
-  },
-  {
-    id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider('Facebook-App-Id')
-  }
-]);
-export function provideConfig() {
-  return config;
-}
-
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +21,16 @@ export function provideConfig() {
     SignUpComponent,
     QuestionsComponent,
     LoginComponent,
+    AboutComponent,
+    ContactComponent,
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    SocialLoginModule, //Google + FaceBook SignIn // 
-    
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
