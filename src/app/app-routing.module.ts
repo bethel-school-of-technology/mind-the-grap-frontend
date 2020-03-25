@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -33,7 +34,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: ' ',
+    path: '',
     redirectTo: 'home',
     pathMatch: 'full',
   },
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'contact', 
     component: ContactComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   }
 
 ];
