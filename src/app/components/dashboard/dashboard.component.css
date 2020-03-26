@@ -1,17 +1,5 @@
-.results{
-    
-   
-}
 .breakDown{
-
     margin-top: 5em;
-   
-
-}
-.next{
-   
-    
-    
 }
 .card{
     display:flex;
@@ -20,6 +8,6 @@
     margin-left:2em;
     margin-right:2em;
     margin-top:2em;
-    
-    
 }
+    
+    
