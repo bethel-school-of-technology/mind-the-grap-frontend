@@ -1,11 +1,8 @@
 form div { 
     color:black;
     text-align: center;
-    padding-left: 35%;
-    padding-right: 35%;
-}
-nav{
-    margin-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .arrow{
     font-size: 30px;
@@ -16,4 +13,22 @@ nav{
 }
 input{
     border-radius: 5px;
+    
+   
+   
+}
+.container{
+    background-color: darkgray;
+    width: 45%;
+    border-radius: 10px;
+    height: 75%;
+    padding-top: 8px;
+    padding-bottom:8px;
+}
+input::placeholder { 
+    text-align: center;
+    
+}
+label{
+    font-weight: 900;
 }
