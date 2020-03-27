@@ -17,7 +17,7 @@ export class ApiService {
 
   // Create
   createUser(data): Observable<any> {
-    let url = `${this.endpoint}/create`;
+    let url = `${this.endpoint}/api/users`;
     return this.http.post(url, data)
       .pipe(
         catchError(this.errorMgmt)
