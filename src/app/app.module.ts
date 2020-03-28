@@ -35,7 +35,6 @@ import { AssessmentComponent } from './components/assessment/assessment.componen
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

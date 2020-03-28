@@ -28,6 +28,7 @@ form{
     height: 75%;
     padding-bottom: 8px;
     padding-top:8px;
+    margin-top:5%;
 }
 input::placeholder { 
     text-align: center;

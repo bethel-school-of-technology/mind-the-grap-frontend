@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { User } from '../../models/user';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { ApiService } from 'src/app/service/api.service';
 
 
 @Component({
@@ -12,7 +15,12 @@ import { User } from '../../models/user';
 export class SignUpComponent implements OnInit {
   model: User = new User();
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private http: HttpClient,
+    private apiService: ApiService
+    ) {}
 
   ngOnInit(): void {
   }
@@ -21,5 +29,5 @@ export class SignUpComponent implements OnInit {
     console.log('Submit Successful: ', this.model);
 }
 
-}
+};
 

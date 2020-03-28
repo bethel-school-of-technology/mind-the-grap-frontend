@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from '../../models/login';
+
+ 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,8 +11,9 @@ export class LoginComponent implements OnInit {
   model: Login = new Login();
   constructor() { }
 
-  ngOnInit(): void {
-  }
+ngOnInit(){
+  
+}
 
   onSubmit() {
     console.log('Submit Successful: ', this.model);

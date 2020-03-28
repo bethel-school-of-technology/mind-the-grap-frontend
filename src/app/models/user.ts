@@ -1,10 +1,11 @@
 export class User {
-    id: number;
-    userName: string;
-    firstName: string;
-    lastName: string;
-    email: string;
-    gender: string;
-    dateOfBirth: Date;
-    password: string;
+    first_name : String;
+    last_name : String;
+    email : String;
+    password : String;
+    updated : {
+        type:'timestamp', 
+        onUpdate: true,
+    }
 }
+    
