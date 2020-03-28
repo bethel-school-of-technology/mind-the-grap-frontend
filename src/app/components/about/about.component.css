@@ -1,6 +1,34 @@
-.about{
-    text-align: center;
-    margin: 3em 10em 3em 10em;
-    padding: 3em 10em 3em 10em;
-}
 
+
+.about{
+    background-image: url("../../../assets/images/B4.JPG");
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    opacity:0.6;
+}
+h2, p{
+    color:black;
+    font-size:15px ;
+    font-weight: bolder;
+    font-family: sans-serif 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana;
+    
+    
+    
+}
+.about_container{
+    display:flex;
+    text-align: center;
+    flex-flow: column;
+    padding-top:5em;
+    width:30%;
+    background-color:lightgray;
+    opacity:0.8;
+    padding-bottom:4.2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    
+    
+}
