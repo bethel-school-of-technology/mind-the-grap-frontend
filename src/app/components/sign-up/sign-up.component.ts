@@ -5,6 +5,7 @@ import { User } from '../../models/user';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ApiService } from 'src/app/service/api.service';
+import { Location } from '@angular/common';
 
 
 @Component({
