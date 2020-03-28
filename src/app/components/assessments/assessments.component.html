@@ -1,39 +1,42 @@
-<div class="alert alert-dismissible alert-warning">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <h4 class="alert-heading">You're signed in!</h4>
-    <p class="mb-0">This is your Dashboard. From here, you can access your profile, take an assessment, view your results, and find additional content. Have fun! <a href="#" class="alert-link"></a>.</p>
-</div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<a class="navbar-brand" href="#">Mind The Gap</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#">Mind The Gap</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-</button> 
+  </button> 
 </nav>
 <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="/home" routerLink="/home" routerLinkActive="active">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="/home" routerLink="/home" routerLinkActive="active">Sign out</a>
-    </li>
-  
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Your Stuff</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">View Your Profile</a>
-        <a class="dropdown-item" href="#">Take A Leadership Assessment</a>
-        <a class="dropdown-item" href="#">View Your Assessment Results</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Additional Content</a>
-      </div>
-    </li>
-  </ul>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="/home" routerLink="/home" routerLinkActive="active">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="/home" routerLink="/home" routerLinkActive="active">Sign out</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="/dashboard" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  </li>
+</ul>
 
-  <!-- End of Logged in Navbar -->
+<!-- End of Navbar -->
 <div style="padding:2em;">
     <p>assessment works!</p>
 
-    <div class="container">
+    <div class="card">
+      <div class="results">
+      <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 10px;">
+        <div class="card-header">Assessment Title</div>
+        <div class="card-body">
+          <h4 class="card-title">Description</h4>
+          <p class="card-text">This assessment will help you better understand.....</p>
+          <div class="center">
+            <button class="status-btn">Not Started</button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
+    <!-- <div class="container">
       <form (ngSubmit)="onSubmit()"> 
           <fieldset>
             <div class="form-group">
@@ -61,7 +64,7 @@
       </div>
 
 
-    <app-assessments *ngFor="let question of Question" [question]="question"></app-assessments>
+    <app-assessments *ngFor="let question of Question" [question]="question"></app-assessments> -->
 
 </div>
 
