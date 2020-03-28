@@ -33,7 +33,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
