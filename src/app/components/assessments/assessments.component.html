@@ -15,24 +15,28 @@
     <a class="nav-link" data-toggle="tab" href="/dashboard" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
   </li>
 </ul>
-
+<!-- Test comment -->
 <!-- End of Navbar -->
 <div style="padding:2em;">
     <p>assessment works!</p>
 
-    <div class="card">
-      <div class="results">
-      <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 10px;">
-        <div class="card-header">Assessment Title</div>
-        <div class="card-body">
-          <h4 class="card-title">Description</h4>
-          <p class="card-text">This assessment will help you better understand.....</p>
-          <div class="center">
-            <button class="status-btn">Not Started</button>
+    < *ngFor="let assessment of Assessments" [assessment]="assessment">
+
+      <div class="card">
+        <div class="results">
+          <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 10px;">
+            <div class="card-header">{{assessment.title}}</div>
+            <div class="card-body">
+              <h4 class="card-title">Description</h4>
+              <p class="card-text">{{assessment.description}}</p>
+              <div class="center">
+                <button class="status-btn">Not Started</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      </div>
+    </app-assessments>
 
 
 
@@ -65,7 +69,5 @@
 
 
     <app-assessments *ngFor="let question of Question" [question]="question"></app-assessments> -->
-
-</div>
 
 
