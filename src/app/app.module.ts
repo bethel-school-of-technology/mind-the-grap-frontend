@@ -14,7 +14,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AssessmentComponent } from './components/assessment/assessment.component';
+import { AssessmentsComponent } from './components/assessments/assessments.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { AssessmentComponent } from './components/assessment/assessment.componen
     NavbarComponent,
     HomeComponent,
     DashboardComponent,
-    AssessmentComponent
+    AssessmentsComponent
   ],
   imports: [
     BrowserModule,

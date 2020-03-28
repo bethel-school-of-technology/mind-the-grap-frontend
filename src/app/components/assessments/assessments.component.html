@@ -28,4 +28,41 @@
       </div>
     </li>
   </ul>
-<p>assessment works!</p>
+
+  <!-- End of Logged in Navbar -->
+<div style="padding:2em;">
+    <p>assessment works!</p>
+
+    <div class="container">
+      <form (ngSubmit)="onSubmit()"> 
+          <fieldset>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Assessment Title</label>
+              <input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="Enter First Name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Last Name</label>
+              <input type="text" class="form-control" id="lastName" aria-describedby="lastName" placeholder="Enter Last Name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address:</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password:</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+            </div>
+            <div>
+              <button type="submit" id="signUp" class="btn btn-success">Sign Up!</button>
+            </div>
+          </fieldset>
+      </form>
+      </div>
+
+
+    <app-assessments *ngFor="let question of Question" [question]="question"></app-assessments>
+
+</div>
+
+

@@ -10,7 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AssessmentComponent } from './components/assessment/assessment.component';
+import { AssessmentsComponent } from './components/assessments/assessments.component';
 
 
 const routes: Routes = [
@@ -54,8 +54,8 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'assessment',
-    component: AssessmentComponent
+    path: 'assessments',
+    component: AssessmentsComponent
   }
 
 ];
