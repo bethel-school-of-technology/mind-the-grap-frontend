@@ -10,7 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AssessmentsComponent } from './components/assessments/assessments.component';
+import { AssessmentComponent } from './components/assessment/assessment.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
 
@@ -57,7 +57,7 @@ const routes: Routes = [
   },
   {
     path: 'assessments',
-    component: AssessmentsComponent
+    component: AssessmentComponent
   },
   {
     path: 'assessment/:id',

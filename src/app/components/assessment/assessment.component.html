@@ -15,12 +15,12 @@
     <a class="nav-link" data-toggle="tab" href="/dashboard" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
   </li>
 </ul>
-<!-- Test comment -->
+
 <!-- End of Navbar -->
 <div style="padding:2em;">
     <p>assessment works!</p>
 
-    < *ngFor="let assessment of Assessments" [assessment]="assessment">
+    <li *ngFor="let assessment of assessments">
 
       <div class="card">
         <div class="results">
@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-    </app-assessments>
+    </li>
 
 
 
