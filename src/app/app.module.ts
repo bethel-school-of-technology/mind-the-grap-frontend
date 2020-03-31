@@ -14,7 +14,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AssessmentComponent } from './components/assessment/assessment.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import { ProfileComponent } from './components/profile/profile.component';
     NavbarComponent,
     HomeComponent,
     DashboardComponent,
-    ProfileComponent
+    AssessmentComponent,
+    ProfileComponent,
+    AssessmentComponent,
+    AssessmentEditComponent
   ],
   imports: [
     BrowserModule,
