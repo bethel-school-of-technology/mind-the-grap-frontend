@@ -27,7 +27,7 @@ export class SignUpComponent implements OnInit {
   }
 //added console log for User 03.08.20//
   onSubmit() {
-    console.log('Submit Successful: ', this.model);
+    console.log('Update Successful: ', this.model);
 }
 
 };

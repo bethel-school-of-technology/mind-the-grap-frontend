@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
     path: 'question/:id',
     component: QuestionsComponent
   },
+  //Log In Page
   {
     path: 'login', 
     component: LoginComponent
@@ -39,23 +41,28 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  //About Page
+  //About and Contact Pages
   {
     path: 'about', 
     component: AboutComponent
   },
-  //Contact Page
   {
     path: 'contact', 
     component: ContactComponent
   },
+  //Dashboard Page
   {
     path: 'dashboard',
     component: DashboardComponent
   },
+  //Profile and Profile_edit Pages
   {
     path: 'profile',
     component: ProfileComponent
+  },
+  {
+    path: 'profile_edit',
+    component:ProfileEditComponent
   }
 ];
 

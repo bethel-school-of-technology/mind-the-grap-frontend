@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">Mind The Gap</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> 
+  </nav>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="/home" routerLink="/home" routerLinkActive="active">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="/home" routerLink="/home" routerLinkActive="active">Sign out</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="/dashboard" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    </li>
+  </ul>
+<div class="container">
+    <form (ngSubmit)="onSubmit()"> 
+        <fieldset>
+          <div class="form-group">
+            <label for="exampleInputEmail1">First Name</label>
+            <input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="Enter First Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Last Name</label>
+            <input type="text" class="form-control" id="lastName" aria-describedby="lastName" placeholder="Enter Last Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address:</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+         
+          <div>
+            <button type="submit" id="update" class="btn btn-success">Update Information</button>
+          </div>
+        </fieldset>
+    </form>
+    </div>
