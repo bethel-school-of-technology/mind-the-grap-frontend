@@ -1,0 +1,17 @@
+button.status-btn{
+    background-color: transparent;
+    border: solid #FFF 1px; 
+    border-radius: 5px;
+    color: #FFF;
+}
+
+button.status-btn:hover {
+    border: solid #FFF 1px;
+    background-color: #FFF;
+    border-radius: 5px;
+    color: #5cb85c;
+}
+
+.center {
+    text-align: center;
+}
