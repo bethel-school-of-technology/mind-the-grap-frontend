@@ -11,7 +11,7 @@ import { catchError } from 'rxjs/operators';
 export class AssessmentService {
   private assessmentUrl = '/api/assessments';
   
-  endpoint:string = 'http://localhost:5000';
+  // endpoint:string = 'http://localhost:5000';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
