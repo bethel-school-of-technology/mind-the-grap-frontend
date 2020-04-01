@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { ApiService } from 'src/app/service/api.service';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+//import { AuthenticationService, TokenPayload } from '../authentication.service'
 
 
 @Component({
@@ -18,6 +19,8 @@ export class SignUpComponent implements OnInit {
   signUpform: FormGroup;
   users:  User[];
   @Input() dataPath: string;
+
+  model: User = new User()
 
   constructor(
     private route: ActivatedRoute,
@@ -35,11 +38,10 @@ export class SignUpComponent implements OnInit {
   }
 //added console log for User 03.08.20//
 onSubmit() {
-  const userData = this.signUpform.value;
-  console.log('Your form data : ', this.signUpform.value );
-  this.apiService.createUser(userData).subscribe((res: Response) => { this.router.navigate(['']);
+  console.log('Your form data : ', this.signUpform );
+  this.apiService.createUser(this.model).subscribe((res: Response) => { this.router.navigate(['']);
 
-  });
+   });
 }
 
 };

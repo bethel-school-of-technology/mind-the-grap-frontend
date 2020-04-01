@@ -24,17 +24,17 @@ export class QuestionListComponent implements OnInit {
     private http: HttpClient,
     private apiService: ApiService
     ) {
-      this.readQuestion();
+      //this.readQuestion();
      }
 
   ngOnInit() {
     
   }
 
-  readQuestion(){
-    this.apiService.getQuestions().subscribe((data) => {
-      this.Question = data;
-    })
-  }
+  // readQuestion(){
+  //   this.apiService.getQuestions().subscribe((data) => {
+  //     this.Question = data;
+  //   })
+  // }
  
 }
