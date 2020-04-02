@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -19,6 +19,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { UserNavbarComponent } from './components/user-navbar/user-navbar.compon
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
