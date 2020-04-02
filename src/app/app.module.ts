@@ -17,6 +17,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AssessmentComponent } from './components/assessment/assessment.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
+import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
+import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { AssessmentEditComponent } from './components/assessment-edit/assessment
     AssessmentComponent,
     ProfileComponent,
     AssessmentComponent,
-    AssessmentEditComponent
+    AssessmentEditComponent,
+    ProfileEditComponent,
+    UserNavbarComponent
   ],
   imports: [
     BrowserModule,
