@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from '../../models/login';
+import { ApiService } from '../../service/api.service';
+import { Router } from '@angular/router';
  
 @Component({
   selector: 'app-login',
@@ -8,7 +10,10 @@ import { Login } from '../../models/login';
 })
 export class LoginComponent implements OnInit {
   model: Login = new Login();
-  constructor() { }
+  constructor(
+    private apiService: ApiService,
+    private router: Router,
+  ) { }
 
 ngOnInit(){
   
@@ -16,6 +21,9 @@ ngOnInit(){
 
   onSubmit() {
     console.log('Submit Successful: ', this.model);
-}
+    this.apiService.logInUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);
 
+})
+
+  }
 }

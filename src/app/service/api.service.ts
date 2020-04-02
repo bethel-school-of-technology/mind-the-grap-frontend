@@ -12,7 +12,7 @@ import { User } from '../models/user';
 
 export class ApiService {
   private userUrl = `/api/users`;
-  //endpoint:string = 'http://localhost:5000';
+  endpoint:string = 'http://localhost:5000/api/users';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   
@@ -24,26 +24,33 @@ export class ApiService {
 
   // Create
   createUser(userData): Observable<any> {
-    return this.http.post(this.userUrl, userData);
+    let url = `${this.endpoint}/signup`
+    return this.http.post(url, userData);
+    
+  }
+
+  logInUser(userData): Observable<any> {
+    let url = `${this.endpoint}/login`
+    return this.http.post(url, userData);
   }
 
   getQuestions(){
     return this.http.get(`/api/questions`);
   }
 
-  // Error handling
-  // errorMgmt(error: HttpErrorResponse) {
-  //   let errorMessage = '';
-  //   if(error.error instanceof ErrorEvent) {
-  //     //Get Client-side error
-  //     errorMessage = error.error.message;
-  //   } else {
-  //     // Get server-side error
-  //     errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-  //   }
-  //   //console.log(errorMessage);
-  //   //return throwError(errorMessage);
-  // }
+  //Error handling
+   errorMgmt(error: HttpErrorResponse) {
+     //let errorMessage = '';
+    //  if(error.error instanceof ErrorEvent) {
+    //    Get Client-side error
+    //     errorMessage = error.error.message;
+    //  } else {
+    //     Get server-side error
+    //  errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    //  }
+    //  console.log(errorMessage);
+    //    return throwError(errorMessage);
+   }
 
  
   }

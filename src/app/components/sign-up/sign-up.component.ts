@@ -39,7 +39,8 @@ export class SignUpComponent implements OnInit {
 //added console log for User 03.08.20//
 onSubmit() {
   console.log('Your form data : ', this.signUpform );
-  this.apiService.createUser(this.model).subscribe((res: Response) => { this.router.navigate(['']);
+  this.apiService.createUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);
+ 
 
    });
 }
