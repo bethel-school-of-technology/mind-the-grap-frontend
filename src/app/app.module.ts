@@ -18,6 +18,7 @@ import { AssessmentComponent } from './components/assessment/assessment.componen
 import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
+import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ProfileEditComponent } from './components/profile-edit/profile-edit.com
     ProfileComponent,
     AssessmentComponent,
     AssessmentEditComponent,
-    ProfileEditComponent
+    ProfileEditComponent,
+    UserNavbarComponent
   ],
   imports: [
     BrowserModule,
