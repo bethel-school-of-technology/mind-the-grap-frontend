@@ -3,6 +3,8 @@ import { Login } from '../../models/login';
 import { ApiService } from '../../service/api.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { FormGroup } from '@angular/forms';
+
  
 
 @Component({
@@ -11,6 +13,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  logIn: FormGroup;
+
   model: Login = new Login();
 
   constructor(
