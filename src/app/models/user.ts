@@ -3,6 +3,7 @@ export class User {
     last_name : String;
     email : String;
     password : String;
+    token? : String;
     updated : {
         type:'timestamp', 
         onUpdate: true,
