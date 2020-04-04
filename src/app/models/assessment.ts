@@ -1,4 +1,5 @@
 export class Assessment {
+    _id:String;
     title: String;
     description: String;
     assessment_type: String;

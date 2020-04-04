@@ -60,7 +60,7 @@ const routes: Routes = [
     component: AssessmentComponent
   },
   {
-    path: 'assessment/:id',
+    path: 'assessments/:title',
     component: AssessmentEditComponent
   },
   {

@@ -23,6 +23,16 @@ export class AssessmentService {
     return this.http.get(this.assessmentUrl);
   }
 
+  getAssessment(assessment_title): Observable<any> {
+    return this.http.get(this.assessmentUrl + "/assessment/" + assessment_title);
+  }
+
+  // editAssessment(assessment_id): Observable<any> {
+  //   const url = '/' + assessment_id
+  //   console.log()
+  //   return this.http.put(this.assessmentUrl + url);
+  // }
+
 
   // Error handling
   errorMgmt(error: HttpErrorResponse) {

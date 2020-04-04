@@ -23,18 +23,18 @@
 
       <div class="card">
         <div class="results">
-          <li *ngFor="let assessment of assessments">
+          <div *ngFor="let assessment of assessments">
           <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 10px;">
             <div class="card-header">{{assessment.title}}</div>
             <div class="card-body">
               <h4 class="card-title">Description</h4>
               <p class="card-text">{{assessment.description}}</p>
               <div class="center">
-                <button class="status-btn">Not Started</button>
+                <a [routerLink]="['/assessments', assessment.title]" class="status-btn">Not Started</a>
               </div>
             </div>
           </div>
-        </li>
+        </div>
         </div>
       </div>
     
