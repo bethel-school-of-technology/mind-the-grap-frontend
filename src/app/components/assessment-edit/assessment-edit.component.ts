@@ -1,9 +1,9 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Question } from '../../models/question';
-import { ApiService } from '../../service/api.service';
 import { ActivatedRoute } from '@angular/router';
+import { AssessmentService } from 'src/app/service/assessment.service';
+import { Assessment } from 'src/app/models/assessment';
 
 @Component({
   selector: 'app-assessment-edit',
@@ -12,29 +12,24 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AssessmentEditComponent implements OnInit {
 
-  @Input() question: Question;
-  @Output() questionAnswer: EventEmitter<any> = new EventEmitter();
-  private assessmentsRoute: ApiService; 
-  public model: Question;
-
-  Question:any = [];
+  public assessment: Assessment = new Assessment();
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private http: HttpClient,
-    private apiService: ApiService
-    ) {
-      this.readQuestion();
-     }
+    private assessmentService: AssessmentService
+    ) {}
 
   ngOnInit() {
-    
+    this.getAssessment();
   }
 
-  readQuestion(){
-    this.apiService.getQuestions().subscribe((data) => {
-      this.Question = data;
+  getAssessment(){
+    const title = this.route.snapshot.paramMap.get('title');
+    this.assessmentService.getAssessment(title).subscribe((data) => {
+      console.log(data);
+      this.assessment = data;
     })
   }
 
