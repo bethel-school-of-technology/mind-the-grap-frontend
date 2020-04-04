@@ -13,6 +13,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AssessmentComponent } from './components/assessment/assessment.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
+import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 
 
 const routes: Routes = [
@@ -41,16 +42,16 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  //About Page
+  //About + Contact Page
   {
     path: 'about', 
     component: AboutComponent
   },
-  //Contact Page
   {
     path: 'contact', 
     component: ContactComponent
   },
+  //Dashboard
   {
     path: 'dashboard',
     component: DashboardComponent
@@ -63,10 +64,16 @@ const routes: Routes = [
     path: 'assessments/:title',
     component: AssessmentEditComponent
   },
+  //Profile + Profile Edit Page
   {
     path: 'profile',
     component: ProfileComponent
+  },
+  {
+    path: 'profile_edit',
+    component: ProfileEditComponent
   }
+
 ];
 
 @NgModule({

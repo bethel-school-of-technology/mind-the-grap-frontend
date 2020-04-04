@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -17,7 +17,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AssessmentComponent } from './components/assessment/assessment.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
+import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AssessmentComponent,
     ProfileComponent,
     AssessmentComponent,
-    AssessmentEditComponent
+    AssessmentEditComponent,
+    ProfileEditComponent,
+    UserNavbarComponent
   ],
   imports: [
     BrowserModule,
