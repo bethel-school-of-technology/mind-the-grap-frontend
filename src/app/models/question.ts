@@ -1,9 +1,17 @@
 export class Question {
-    id: number;
-    name: string;
-    answer1: string;
-    answer2: string;
-    answer3: string;
-    answer4: string;
-    answer5: string;
+    _id: String;
+    name: String;
+    question_order: Number;
+    question_text: String;
+    question_type: String;
+    assessment_id: String;
+    answer_option: [{
+        option_text: String,
+        score: Number,
+        answer_bucket: String 
+    }];
+    updated : {
+        type:'timestamp', 
+        onUpdate: true,
+    };
 }
