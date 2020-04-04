@@ -1,0 +1,21 @@
+a.status-btn{
+    padding: 5px;
+    background-color: transparent;
+    border: solid #FFF 1px; 
+    border-radius: 5px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+a.status-btn:hover {
+    padding: 5px;
+    border: solid #FFF 1px;
+    background-color: #FFF;
+    border-radius: 5px;
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+}
