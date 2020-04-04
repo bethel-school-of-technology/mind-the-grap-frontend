@@ -45,7 +45,7 @@ import { UserNavbarComponent } from './components/user-navbar/user-navbar.compon
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
