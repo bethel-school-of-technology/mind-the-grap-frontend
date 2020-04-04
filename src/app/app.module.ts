@@ -19,6 +19,9 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
+import { AdminViewComponent } from './components/admin-view/admin-view.component';
+
+
 
 
 @NgModule({
@@ -38,7 +41,9 @@ import { UserNavbarComponent } from './components/user-navbar/user-navbar.compon
     AssessmentComponent,
     AssessmentEditComponent,
     ProfileEditComponent,
-    UserNavbarComponent
+    UserNavbarComponent,
+    AdminViewComponent,
+        
   ],
   imports: [
     BrowserModule,

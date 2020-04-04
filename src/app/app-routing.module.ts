@@ -14,6 +14,7 @@ import { AssessmentComponent } from './components/assessment/assessment.componen
 import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
+import { AdminViewComponent } from './components/admin-view/admin-view.component';
 
 
 const routes: Routes = [
@@ -72,6 +73,10 @@ const routes: Routes = [
   {
     path: 'profile_edit',
     component: ProfileEditComponent
+  },
+  {
+    path: 'admin',
+    component: AdminViewComponent
   }
 
 ];
