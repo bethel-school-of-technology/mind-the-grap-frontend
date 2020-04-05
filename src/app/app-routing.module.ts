@@ -77,6 +77,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminViewComponent
+  }, 
+  {
+    path: 'admin/questions/:assessment_id',
+    component: AdminViewComponent
   }
 
 ];
