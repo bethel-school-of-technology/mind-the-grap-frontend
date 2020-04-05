@@ -31,9 +31,7 @@ export class AdminViewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-  this.getResponse();
   this.getAssessments();
-  this.getQuestions();
   }
 
 

@@ -2,7 +2,7 @@
 <div style="padding:2em;">
     <p>admin-view works!</p>
 
-
+<!-- 
   <div class="card">
     <div class="results">
         <div *ngFor="let response of responses">
@@ -18,12 +18,12 @@
           </div>
           </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="card">
       <div class="results">
         <div *ngFor="let assessment of assessments">
-        <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 10px;">
+        <div class="card text-white bg-success mb-3" style="max-width: 50rem; margin: 10px;">
           <div class="card-header">{{assessment.title}}</div>
           <div class="card-body">
             <h4 class="card-title">Description</h4>
@@ -31,9 +31,11 @@
             <div class="center">
               <a [routerLink]="['/assessments', assessment.title]" class="status-btn">View Assessment</a>
             </div>
+            <div *ngFor="let question of questions.assessment_id">
             <div class="right">
               <a routerLink="questions/{{questions.assessment_id}}" routerLinkActive="active" class="status-btn">View Questions</a>
             </div>
+          </div>
           </div>
         </div>
       </div>
