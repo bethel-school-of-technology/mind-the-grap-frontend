@@ -10,4 +10,15 @@
     margin-top:2em;
 }
     
+/* Mobile */
+ /* Portrait and Landscape */
+ @media only screen 
+ and (max-device-width: 425px){
+    .card{
+         flex-direction: column;
+     }
+    .breakDown{
+        margin-top: 0em;
+    }
+ }
     
