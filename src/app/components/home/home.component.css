@@ -1,6 +1,132 @@
-nav{
-    border-radius: 3px;
+app-navbar{
+  position: fixed;
+  width:100%;  
 }
+
+#hr{
+    border-color: whitesmoke;
+}
+
+
 #test{
     border-radius: 5px;
 }
+.landing{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing_content{
+   width:45%;
+   text-align: center;
+}
+.mtg{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pastor{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.strong{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:2em;
+    background-color: #EBEBEB;
+    border-radius: 10px;
+    margin-left:33%;
+    margin-right:33%;
+    
+    
+}
+.strong_content{
+   background-color:#4E5D6C;
+    width:80%;
+    margin-bottom:1.5em;
+    border-radius: 10px;
+    padding:1em 1.2em 1em 1em;
+}
+li{
+    list-style-type: none;
+    font-size: 10px;
+    text-align: left;
+}
+i{
+font-size: 2em;
+color:#EBEBEB;
+}
+.jump{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:2em;
+}
+.jump_content{
+    width:45%;
+    text-align: center;
+}
+.assessment{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:2em;
+}
+
+
+/* Mobile */
+ /* Portrait and Landscape */
+ @media only screen 
+ and (max-device-width: 425px){
+
+.mtg_content{
+    width:80%;
+    text-align: center;
+}
+.mtg_content h2{
+    font-size: 2.8em;
+}
+.pastor_content{
+    width:80%;
+}
+.pastor_content i{
+    font-size: 1.4em;
+}
+.landing_content{
+    width:90%;
+    text-align: center;
+}
+.strong_content{
+    width:90%;
+    
+   
+    
+}
+.strong{
+    width:90%;
+    margin-right:0em;
+    margin-left:1.3em;
+    
+   
+    
+}
+.jump_content{
+    width:80%;
+}
+#jumbo{
+    padding-top:5em;
+}
+
+
+
+
+
+ }
