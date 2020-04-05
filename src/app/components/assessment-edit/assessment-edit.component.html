@@ -22,16 +22,27 @@
     <!-- <div *ngFor="let assessment of assessment"> -->
         <div class="card">
           <div class="results">
-            <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 10px;">
               <div class="card-header">{{assessment.title}}</div>
               <div class="card-body">
                 <h4 class="card-title">Description</h4>
                 <p class="card-text">{{assessment.description}}</p>
-                <div class="center">
-                    <a [routerLink]="['/assessments', assessment._id]" class="status-btn">Not Started</a>
-                </div>
+                <form (ngSubmit)="onSubmit()">
+                  <fieldset>
+                    <div class="form-group" *ngFor="let question of questions">
+                      <label for="questionInput{{question._id}}">{{question.text}}</label>
+                      <!-- <div class="form-group" *ngFor="let answer of question.answer_option">
+                        <label for="answerInput{{question._id}}">{{answer.text}}</label>
+                        <input type="email" class="form-control" id="questionInput{{question._id}}" aria-describedby="emailHelp">
+                      </div> -->
+                      
+                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                  </fieldset>
+                  <div class="center">
+                      <button type="submit" id="login" class="btn btn-success">Submit Answers</button>
+                  </div>
+                </form>
               </div>
-            </div>
           </div>
         </div>
     <!-- </div> -->
