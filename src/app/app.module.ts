@@ -22,6 +22,8 @@ import { UserNavbarComponent } from './components/user-navbar/user-navbar.compon
 import { AdminViewComponent } from './components/admin-view/admin-view.component';
 
 
+import { QuestionService } from './service/question.service';
+import { AssessmentService } from './service/assessment.service';
 
 
 @NgModule({
@@ -50,9 +52,9 @@ import { AdminViewComponent } from './components/admin-view/admin-view.component
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [ApiService],
+  providers: [ApiService, QuestionService, AssessmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

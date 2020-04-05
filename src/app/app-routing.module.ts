@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { QuestionListComponent } from './components/question-list/question-list.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AppComponent } from './app.component';
@@ -23,8 +22,6 @@ const routes: Routes = [
     path: 'signUp',
     component: SignUpComponent
   },
- 
-  // this will page will hold the assessment
   {
     path: 'question/:id',
     component: QuestionsComponent
@@ -61,6 +58,7 @@ const routes: Routes = [
     path: 'assessments',
     component: AssessmentComponent
   },
+  //This page has the assessment loaded on it.
   {
     path: 'assessments/:title',
     component: AssessmentEditComponent

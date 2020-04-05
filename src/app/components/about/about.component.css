@@ -32,3 +32,23 @@ h2, p{
     
     
 }
+/* Mobile */
+ /* Portrait and Landscape */
+ @media only screen 
+ and (max-device-width: 425px){
+    .about{
+        background-position: center;
+        opacity:0.9;
+
+    }
+    .about_container{
+        width:100%;
+        padding-top: 12em;
+        opacity:0.75;
+        
+
+    }
+
+ }
+
+ 
