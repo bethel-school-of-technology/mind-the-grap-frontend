@@ -18,30 +18,33 @@
   
   <!-- End of Navbar -->
   <div style="padding:2em;">
-    <p>assessment-edit works!</p>
-    <!-- <div *ngFor="let assessment of assessment"> -->
         <div class="card">
           <div class="results">
-              <div class="card-header">{{assessment.title}}</div>
+              <div class="card-header center">{{assessment.title}}</div>
               <div class="card-body">
                 <h4 class="card-title">Description</h4>
                 <p class="card-text">{{assessment.description}}</p>
                 <form (ngSubmit)="onSubmit()">
-                  <fieldset>
-                    <div class="form-group" *ngFor="let question of questions">
-                      <label for="questionInput{{question._id}}">{{question.text}}</label>
-                      <!-- <div class="form-group" *ngFor="let answer of question.answer_option">
-                        <label for="answerInput{{question._id}}">{{answer.text}}</label>
-                        <input type="email" class="form-control" id="questionInput{{question._id}}" aria-describedby="emailHelp">
-                      </div> -->
-                      
-                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                    </div>
+                  <div>Questions:</div>
+                  <div *ngFor="let question of questions">
+                  <fieldset class="form-group">
+                      <label for="questionInput">{{question.question_text}}</label>
+                      <div *ngFor="let answer of question.answer_options">
+                          <!-- Start of Custom Radio button logic  -->
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="customRadio{{answer._id}}" name="customRadio{{question._id}}" class="custom-control-input" checked="">
+                              <label class="custom-control-label" for="customRadio{{answer._id}}">{{answer.option_text}}</label>
+                            </div>
+                        </div>
                   </fieldset>
+                </div>
                   <div class="center">
                       <button type="submit" id="login" class="btn btn-success">Submit Answers</button>
                   </div>
                 </form>
+                <div class="center" style="margin-top: 2em;">
+                  <a [routerLink]="['/assessments']" class="status-btn">Cancel</a>
+                </div>
               </div>
           </div>
         </div>

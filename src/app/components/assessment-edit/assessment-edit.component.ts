@@ -34,6 +34,7 @@ export class AssessmentEditComponent implements OnInit {
     this.assessmentService.getAssessment(title).subscribe((data) => {
       console.log("Assessment:");
       console.log(data);
+      console.log(data._id);
       this.assessment = data;
       this.getQuestions(data._id);
     })
@@ -48,7 +49,7 @@ export class AssessmentEditComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('Submit Successful: ', this);
+    console.log('Submit Successful');
     // this.apiService.logInUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);
   }
 }

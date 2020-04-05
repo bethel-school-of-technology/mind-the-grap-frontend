@@ -5,7 +5,7 @@ export class Question {
     question_text: String;
     question_type: String;
     assessment_id: String;
-    answer_option: [{
+    answer_options: [{
         option_text: String,
         score: Number,
         answer_bucket: String 
