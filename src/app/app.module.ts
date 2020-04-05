@@ -21,6 +21,8 @@ import { ProfileEditComponent } from './components/profile-edit/profile-edit.com
 import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
 import { QuestionService } from './service/question.service';
 import { AssessmentService } from './service/assessment.service';
+import { ResponseService } from './service/response.service';
+
 
 
 @NgModule({
@@ -49,7 +51,7 @@ import { AssessmentService } from './service/assessment.service';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ApiService, QuestionService, AssessmentService],
+  providers: [ApiService, QuestionService, AssessmentService, ResponseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

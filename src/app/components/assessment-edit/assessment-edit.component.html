@@ -24,7 +24,7 @@
               <div class="card-body">
                 <h4 class="card-title">Description</h4>
                 <p class="card-text">{{assessment.description}}</p>
-                <form (ngSubmit)="onSubmit()">
+                <form (ngSubmit)="onSubmit(f)" #f="ngForm">
                   <div>Questions:</div>
                   <div *ngFor="let question of questions">
                   <fieldset class="form-group">
@@ -32,7 +32,7 @@
                       <div *ngFor="let answer of question.answer_options">
                           <!-- Start of Custom Radio button logic  -->
                             <div class="custom-control custom-radio">
-                              <input type="radio" id="customRadio{{answer._id}}" name="customRadio{{question._id}}" class="custom-control-input" checked="">
+                              <input type="radio" id="customRadio{{answer._id}}" name="customRadio{{question._id}}" value="{{answer._id}}" class="custom-control-input" checked="" ngModel>
                               <label class="custom-control-label" for="customRadio{{answer._id}}">{{answer.option_text}}</label>
                             </div>
                         </div>
