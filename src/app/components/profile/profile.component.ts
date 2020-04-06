@@ -13,10 +13,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  //_id: number;
   profile: FormGroup;
   @Input() dataPath: string;
 
   model: User = new User();
+
+  //private sub: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +29,15 @@ export class ProfileComponent implements OnInit {
     private router: Router
   ) { }
 
+  // ngOnInit() {
+    // this.sub = this.route.params.subscribe(params => {
+    //    this._id = +params['_id']; // (+) converts string 'id' to a number
+
+       // In a real app: dispatch action to load the details here.
+  //   });
+  // }
+
+  // old logic for getUser
   ngOnInit(): void {
     this.getUser();
   }
