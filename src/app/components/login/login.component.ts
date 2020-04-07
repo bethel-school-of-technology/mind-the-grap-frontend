@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Login } from '../../models/login';
+import { User } from '../../models/user';
 import { ApiService } from '../../service/api.service';
-import { Router } from '@angular/router';
+import { UserService } from '../../service/user.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
 
  
 
@@ -13,24 +15,57 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  logIn: FormGroup;
-
-  model: Login = new Login();
+  loginForm: FormGroup;
+  loading = false;
+  submitted = false; 
+  returnUrl: string;
+  error = '';
 
   constructor(
+    private formBuilder: FormBuilder,
     private apiService: ApiService,
+    private route: ActivatedRoute,
     private router: Router,
     private http: HttpClient,
-  ) {}
+  ) {
+    //redirect to home if already logged in 
+    // once we have profile/:id working this should be profile page
+    if (this.apiService.currentUserValue) {
+      this.router.navigate(['/'])
+    }
+  }
 
 ngOnInit(){
-  
+  this.loginForm = this.formBuilder.group({
+    email: ['', Validators.required],
+    password: ['', Validators.required]
+  });
+
+  // get return url from route parameters or default to '/'
+  this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 }
 
-  onSubmit() {
-    console.log('Submit Successful: ', this.model);
-    this.apiService.logInUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);
+// getter for form fields
+get f() { return this.loginForm.controls;}
 
-    });
+  onSubmit() {
+    this.submitted = true;
+
+    // stop here is form is invalid
+    if (this.loginForm.invalid) {
+      return;
+    }
+
+    this.loading = true;
+    this.apiService.logInUser(this.f.email.value, this.f.password.value)
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.router.navigate([this.returnUrl]);
+      },
+      error => {
+        this.error = error;
+        this.loading = false;
+      });
   }
 };
