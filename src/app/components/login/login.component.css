@@ -1,3 +1,14 @@
+.login_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_info_content{
+    font-family: sans-serif 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana;
+    text-align: center;
+    padding-top:2em;
+    font-size: 1.1em;
+}
 form div { 
     color:black;
     text-align: center;
@@ -39,14 +50,15 @@ label{
  @media only screen 
  and (max-device-width: 425px){
 
-.container{
+    .container{
     width:80%;
 
+    }
+    .login_info_content{
+   
+    
+    }
+
 }
-
-
-
-
- }
 
 

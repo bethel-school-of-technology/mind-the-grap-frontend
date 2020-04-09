@@ -2,8 +2,14 @@
     text-align: center;
     margin-top:5%;
 }
+li{
+    list-style-type: none;
+}
+ul{
+    padding-right:2.5em;
+}
 
-/* Mobile */
+/* Mobile *
  /* Portrait and Landscape */
  @media only screen 
  and (max-device-width: 425px){
