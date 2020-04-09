@@ -58,9 +58,8 @@ export class AssessmentEditComponent implements OnInit {
     /* 
       I need to ensure the answer values are tied correctly to their question ids
       user_id is a placeholder for work Taylor is doing
-      Need to build the responseService
-
+      redirect should go to a results page once it is built
     */
-    this.responseService.createResponses(f.value, this.questions, this.assessment._id, "user_id").subscribe((res: Response) => { this.router.navigate(['/dashboard']);})
+    this.responseService.createResponses(f.value, this.questions, this.assessment._id, "123456789").subscribe((res: Response) => { this.router.navigate(['/dashboard']);})
   }
 }

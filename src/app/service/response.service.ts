@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 })
 
 export class ResponseService {
-  private responseUrl = '/api/assessments';
+  private responseUrl = '/api/responses';
   // endpoint:string = 'http://localhost:5000';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
@@ -24,7 +24,13 @@ export class ResponseService {
 
   createResponses(answerIds, questionIds, assessmentId, userId): Observable<any> {
     // Need to figure out how to past all the parameters as one arguement (limited to 3 in post)
-    return this.http.post(this.responseUrl, answerIds, userId);
+    const responseData = {
+        "user_id": userId,
+        "assessment_id": assessmentId,
+        "answer_option_id": answerIds
+    }
+
+    return this.http.post(this.responseUrl, responseData);
   }
 
   // Error handling
