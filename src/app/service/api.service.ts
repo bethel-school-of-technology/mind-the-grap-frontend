@@ -44,10 +44,29 @@ export class ApiService {
   }
 
 // Login USER
-  logInUser(userData): Observable<any> {
+  // logInUser(userData): Observable<any> {
+  //   let url = `${this.endpoint}/login`
+  //   return this.http.post(url, userData);
+
+   
+
+  //}
+
+  //new login logic
+
+  logInUser(userData) {
     let url = `${this.endpoint}/login`
-    return this.http.post(url, userData);
-  }
+    return this.http.post<any>(url, { email: userData.email, password: userData.password })
+        .pipe(map(user => {
+            // login successful if there's a jwt token in the response
+            if (user && user.token) {
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                localStorage.setItem('currentUser', JSON.stringify(user));
+            }
+
+            return user;
+        }));
+}
 
   getQuestions(){
     return this.http.get(`/api/questions`);
