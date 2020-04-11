@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../service/api.service';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router'; 
 
 @Component({
   selector: 'app-user-navbar',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor( 
+    private apiService: ApiService,
+    private http: HttpClient
+    ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+  }
+
+  onLogout() {
+   console.log("trying to logout");
+   this.apiService.logout();
   }
 
 }

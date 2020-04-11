@@ -17,7 +17,7 @@ export class ApiService {
   
   constructor(
     private http: HttpClient, 
-    private router: Router) {}
+    private router: Router,) {}
 
   // services go here... create, get, update, delete, errorhandling...
 
@@ -59,13 +59,23 @@ export class ApiService {
     return this.http.post<any>(url, { email: userData.email, password: userData.password })
         .pipe(map(user => {
             // login successful if there's a jwt token in the response
+            //console.log("userdata:");
+            //console.log(user);
             if (user && user.token) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('currentUser', JSON.stringify(user));
+                //console.log("GOT HERE");
+                localStorage.setItem('currentUser', JSON.stringify(user.token));
+
             }
 
             return user;
         }));
+}
+
+logout() {
+    localStorage.removeItem('currentUser');
+    //return this.http.get(`/home`);
+   this.router.navigate(['/home']);
 }
 
   getQuestions(){
