@@ -1,24 +1,54 @@
 .breakDown{
     margin-top: 5em;
 }
+.results .breakDown .next{
+    width:90%;
+}
+    
 .card{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left:2em;
-    margin-right:2em;
-    margin-top:2em;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:5%;
+    border-radius: 5px;
 }
+
     
 /* Mobile */
  /* Portrait and Landscape */
  @media only screen 
  and (max-device-width: 425px){
+    
     .card{
          flex-direction: column;
-     }
+    }
     .breakDown{
         margin-top: 0em;
     }
- }
+}
+
+  /* Portrait and Landscape TABLET */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1023px)
+and (-webkit-min-device-pixel-ratio: 2){
+
+    .card{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .breakDown{
+        margin-top: 0em;
+    }
+
+
+
+
+
+
+}
     
