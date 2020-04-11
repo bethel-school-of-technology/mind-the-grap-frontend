@@ -4,6 +4,7 @@ import { catchError, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
+import * as jwt_decode from 'jwt-decode';
 
 
 @Injectable({
@@ -39,7 +40,11 @@ export class ApiService {
 
   // Get USER
   getUser(): Observable<any> {
-    let url = `${this.endpoint}/profile/5e854fca8df80a10a9eaf321`
+    var token = localStorage.current_user;
+    var decoded = jwt_decode(token); 
+    console.log(decoded);   
+ 
+    let url = `${this.endpoint}/profile/` + decoded.user_id
     return this.http.get(url);
   }
 
@@ -47,9 +52,6 @@ export class ApiService {
   // logInUser(userData): Observable<any> {
   //   let url = `${this.endpoint}/login`
   //   return this.http.post(url, userData);
-
-   
-
   //}
 
   //new login logic
