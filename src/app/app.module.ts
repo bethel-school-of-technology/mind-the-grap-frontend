@@ -22,6 +22,8 @@ import { UserNavbarComponent } from './components/user-navbar/user-navbar.compon
 import { QuestionService } from './service/question.service';
 import { AssessmentService } from './service/assessment.service';
 import { ResultComponent } from './components/result/result.component';
+import { ResponseService } from './service/response.service';
+
 
 
 @NgModule({
@@ -51,7 +53,7 @@ import { ResultComponent } from './components/result/result.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ApiService, QuestionService, AssessmentService],
+  providers: [ApiService, QuestionService, AssessmentService, ResponseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
