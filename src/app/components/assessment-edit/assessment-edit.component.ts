@@ -50,6 +50,6 @@ export class AssessmentEditComponent implements OnInit {
 
   onSubmit() {
     console.log('Submit Successful');
-    // this.apiService.logInUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);
+  //  this.apiService.logInUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);
   }
 }
