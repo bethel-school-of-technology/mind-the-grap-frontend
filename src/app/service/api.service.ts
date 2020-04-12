@@ -40,17 +40,17 @@ export class ApiService {
 
   // Get USER
   getUser(): Observable<any> {
-    console.log("Got to start of request.");
+    // console.log("Got to start of request.");
     var token = localStorage.getItem('currentUser');
-    console.log("Set Token Variable:");
-    console.log(token);
-    console.log("attempt to decode token:");
+    // console.log("Set Token Variable:");
+    // console.log(token);
+    // console.log("attempt to decode token:");
     var decoded = jwt_decode(token);
-    console.log("Decoded Token, should have user_id:") 
-    console.log(decoded);   
+    // console.log("Decoded Token, should have user_id:") 
+    // console.log(decoded);   
     let url = `${this.endpoint}/profile/` + decoded._id
-    console.log("Url configured:");
-    console.log(url);
+    // console.log("Url configured:");
+    // console.log(url);
     return this.http.get(url);
   }
 
