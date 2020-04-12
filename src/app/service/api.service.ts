@@ -67,11 +67,11 @@ export class ApiService {
     return this.http.post<any>(url, { email: userData.email, password: userData.password })
         .pipe(map(user => {
             // login successful if there's a jwt token in the response
-            console.log("userdata:");
-            console.log(user.token);
+            // console.log("userdata:");
+            // console.log(user.token);
             if (user && user.token) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
-                console.log("GOT HERE");
+                // console.log("GOT HERE");
                 localStorage.setItem('currentUser', JSON.stringify(user.token));
 
             }
