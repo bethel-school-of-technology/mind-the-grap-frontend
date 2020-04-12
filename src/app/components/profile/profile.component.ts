@@ -13,8 +13,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  //_id: number;
-  profile: FormGroup;
   @Input() dataPath: string;
 
   model: User = new User();
@@ -43,6 +41,7 @@ export class ProfileComponent implements OnInit {
   }
 
   getUser(){
+    let user_id = "123456789"
     this.apiService.getUser().subscribe((data) => {
       this.model = data;
     })
