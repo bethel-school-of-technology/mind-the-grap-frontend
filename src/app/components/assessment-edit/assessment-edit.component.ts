@@ -53,13 +53,9 @@ export class AssessmentEditComponent implements OnInit {
   }
 
   onSubmit(f) {
-    console.log("Form Data:")
-    console.log(f.value);
-    /* 
-      I need to ensure the answer values are tied correctly to their question ids
-      user_id is a placeholder for work Taylor is doing
-      redirect should go to a results page once it is built
-    */
-    this.responseService.createResponses(f.value, this.questions, this.assessment._id, "123456789").subscribe((res: Response) => { this.router.navigate(['/dashboard']);})
+    // console.log("Form Data:")
+    // console.log(f.value); 
+    // redirect should go to a results page once it is built
+    this.responseService.createResponses(f.value, this.questions, this.assessment._id).subscribe((res: Response) => { this.router.navigate(['/dashboard']);})
   }
 }
