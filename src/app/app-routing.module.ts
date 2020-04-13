@@ -13,6 +13,7 @@ import { AssessmentComponent } from './components/assessment/assessment.componen
 import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
+import {AuthGuard} from './service/auth.guard';
 
 
 const routes: Routes = [
@@ -51,11 +52,14 @@ const routes: Routes = [
   //Dashboard
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'assessments',
-    component: AssessmentComponent
+    component: AssessmentComponent,
+    canActivate: [AuthGuard]
+    
   },
   //This page has the assessment loaded on it.
   {
@@ -65,11 +69,13 @@ const routes: Routes = [
   //Profile + Profile Edit Page
   {
     path: 'profile/',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'profile_edit',
-    component: ProfileEditComponent
+    component: ProfileEditComponent,
+    canActivate: [AuthGuard]
   }
 
 ];
