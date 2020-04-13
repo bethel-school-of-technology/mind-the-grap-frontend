@@ -4,6 +4,7 @@ import { catchError, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
+import * as jwt_decode from 'jwt-decode';
 
 
 @Injectable({
@@ -39,7 +40,17 @@ export class ApiService {
 
   // Get USER
   getUser(): Observable<any> {
-    let url = `${this.endpoint}/profile/5e854fca8df80a10a9eaf321`
+    // console.log("Got to start of request.");
+    var token = localStorage.getItem('currentUser');
+    // console.log("Set Token Variable:");
+    // console.log(token);
+    // console.log("attempt to decode token:");
+    var decoded = jwt_decode(token);
+    // console.log("Decoded Token, should have user_id:") 
+    // console.log(decoded);   
+    let url = `${this.endpoint}/profile/` + decoded._id
+    // console.log("Url configured:");
+    // console.log(url);
     return this.http.get(url);
   }
 
@@ -47,9 +58,6 @@ export class ApiService {
   // logInUser(userData): Observable<any> {
   //   let url = `${this.endpoint}/login`
   //   return this.http.post(url, userData);
-
-   
-
   //}
 
   //new login logic
@@ -59,11 +67,11 @@ export class ApiService {
     return this.http.post<any>(url, { email: userData.email, password: userData.password })
         .pipe(map(user => {
             // login successful if there's a jwt token in the response
-            //console.log("userdata:");
-            //console.log(user);
+            // console.log("userdata:");
+            // console.log(user.token);
             if (user && user.token) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
-                //console.log("GOT HERE");
+                // console.log("GOT HERE");
                 localStorage.setItem('currentUser', JSON.stringify(user.token));
 
             }
