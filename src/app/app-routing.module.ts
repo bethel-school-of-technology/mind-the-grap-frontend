@@ -24,7 +24,8 @@ const routes: Routes = [
   },
   {
     path: 'question/:id',
-    component: QuestionsComponent
+    component: QuestionsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login', 
@@ -64,7 +65,8 @@ const routes: Routes = [
   //This page has the assessment loaded on it.
   {
     path: 'assessments/:title',
-    component: AssessmentEditComponent
+    component: AssessmentEditComponent,
+    canActivate: [AuthGuard]
   },
   //Profile + Profile Edit Page
   {

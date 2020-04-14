@@ -63,6 +63,7 @@ export class ApiService {
         }));
 }
 
+
 logout() {
     localStorage.removeItem('currentUser');
     //return this.http.get(`/home`);
