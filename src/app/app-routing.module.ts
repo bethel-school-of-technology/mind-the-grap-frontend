@@ -13,6 +13,7 @@ import { AssessmentComponent } from './components/assessment/assessment.componen
 import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
+import { ResultComponent } from './components/result/result.component';
 
 
 const routes: Routes = [
@@ -70,6 +71,10 @@ const routes: Routes = [
   {
     path: 'profile_edit',
     component: ProfileEditComponent
+  },
+  {
+    path: 'results', 
+    component: ResultComponent
   }
 
 ];
