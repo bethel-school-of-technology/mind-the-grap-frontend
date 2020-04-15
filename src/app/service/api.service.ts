@@ -59,13 +59,7 @@ export class ApiService {
     return this.http.get(url);
   }
 
-// Login USER
-  // logInUser(userData): Observable<any> {
-  //   let url = `${this.endpoint}/login`
-  //   return this.http.post(url, userData);
-  //}
-
-  //new login logic
+  // Log In USER
   logInUser(userData) {
     let url = `${this.endpoint}/login`
     return this.http.post<any>(url, { email: userData.email, password: userData.password })
