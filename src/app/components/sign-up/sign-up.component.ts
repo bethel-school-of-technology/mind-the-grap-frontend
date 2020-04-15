@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
 import { ApiService } from 'src/app/service/api.service';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-//import { AuthenticationService, TokenPayload } from '../authentication.service'
 
 
 @Component({
@@ -31,10 +30,7 @@ export class SignUpComponent implements OnInit {
     ) {}
 
   ngOnInit()  {
-    /*this.http.get<User[]>(this.dataPath).subscribe(
-      users=> {
-        this.users = users;
-      });*/
+    
   }
 
 onSubmit() {
