@@ -13,6 +13,8 @@ export class AuthGuard implements CanActivate {
     private apiService: ApiService,
   ) {} 
 
+  //canActivate method is calling localStorage to getItem if the currentUser has credentials to access a page
+  //RouteGuard routing can be found @ app-routing-modules.ts
   canActivate(): boolean {
     if (localStorage.getItem('currentUser')) {
       return true 

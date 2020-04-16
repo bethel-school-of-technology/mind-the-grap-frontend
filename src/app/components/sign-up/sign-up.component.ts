@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
+  //signUpform property is tracking the value of FormGroup called in signUp.HTML
   signUpform: FormGroup;
   users:  User[];
   @Input() dataPath: string;
@@ -32,7 +33,7 @@ export class SignUpComponent implements OnInit {
   ngOnInit()  {
     
   }
-
+//createUser found in api.service 
 onSubmit() {
   console.log('Your form data : ', this.signUpform );
   this.apiService.createUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);

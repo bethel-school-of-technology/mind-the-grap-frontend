@@ -13,6 +13,7 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  //logIn property is tracking the value of FormGroup called in login.HTML
   logIn: FormGroup;
 
   model: Login = new Login();
@@ -26,7 +27,8 @@ export class LoginComponent implements OnInit {
 ngOnInit(){
   
 }
-
+// onSubmit method is allowing the user to log in + calling the router to naviage user to dashboard
+//logInUser found in api.service
   onSubmit() {
     //console.log('Submit Successful: ', this.model);
     this.apiService.logInUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);

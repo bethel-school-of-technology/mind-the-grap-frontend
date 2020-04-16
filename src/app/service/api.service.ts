@@ -59,7 +59,7 @@ export class ApiService {
     return this.http.get(url);
   }
 
-  // Log In USER
+  // LogIn USER 
   logInUser(userData) {
     let url = `${this.endpoint}/login`
     return this.http.post<any>(url, { email: userData.email, password: userData.password })
@@ -74,14 +74,14 @@ export class ApiService {
             }
             return user;
         }));
-}
+  }
 
 
-logout() {
+  logout() {
     localStorage.removeItem('currentUser');
     //return this.http.get(`/home`);
    this.router.navigate(['/home']);
-}
+  }
 
   getQuestions(){
     return this.http.get(`/api/questions`);
@@ -94,7 +94,7 @@ logout() {
       //  Get Client-side error
         errorMessage = error.error.message;
      } else {
-        // Get server-side error
+      // Get server-side error
      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
      }
      console.log(errorMessage);
