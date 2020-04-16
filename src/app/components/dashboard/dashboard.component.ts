@@ -32,11 +32,11 @@ export class DashboardComponent implements OnInit {
 
   getResult(){
     this.responseService.getResponse().subscribe((data) => {
-      if (data != "Assessment Not Taken") {
+      if (data != "No Assessment Taken") {
         var assessment_id = data.assessment_id;
         var user_id = data.user_id;
         this.resultService.getResults(assessment_id, user_id).subscribe((result) => {
-          if (result != "Assessment Not Taken") {
+          if (result != "No Assessment Taken") {
             console.log("result:");
             console.log(result);
             this.result = result;
@@ -44,7 +44,7 @@ export class DashboardComponent implements OnInit {
           }
         });
       } else {
-        this.result = "Assessment Not Taken";
+        this.result = "No Assessment Taken";
       }  
     })
   }
