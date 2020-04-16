@@ -28,7 +28,7 @@ ngOnInit(){
 }
 
   onSubmit() {
-    console.log('Submit Successful: ', this.model);
+    //console.log('Submit Successful: ', this.model);
     this.apiService.logInUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);
     console.log(res);
     });
