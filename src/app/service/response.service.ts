@@ -26,6 +26,11 @@ export class ResponseService {
     return this.http.get(this.responseUrl);
   }
 
+  getResponse(): Observable<any> {
+    var user_id = this.apiService.getUserId(); 
+    return this.http.post(this.responseUrl + "/" + user_id, user_id);
+  }
+
   createResponses(answerIds, questionIds, assessmentId): Observable<any> {
     // Need to figure out how to past all the parameters as one arguement (limited to 3 in post)
     var user_id = this.apiService.getUserId();
