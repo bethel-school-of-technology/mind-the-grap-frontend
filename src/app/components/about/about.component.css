@@ -13,6 +13,7 @@ app-navbar{
     display:flex;
     text-align: center;
     flex-flow: column;
+    align-items: center;
     
  
     
@@ -34,18 +35,20 @@ h3{
 .about_container{
    
     padding-top:5em;
-    width:30%;
+    width:60%;
     height: 50%;
-    opacity:0.9;
+    opacity:0.85;
     padding-bottom:4.5em;
     padding-left: 2em;
     padding-right: 2em;
+    margin-top:20%;
+    
    
    
 }
  .about_content{
     background-color:lightgray;
-    padding: 2em 0em;
+    padding: 2em 1em;
     border-radius: 10px;
 
  }   
@@ -63,11 +66,37 @@ h3{
     .about_container{
         width:100%;
         padding-top: 12em;
-        opacity:0.75;
+        opacity:0.85;
+        margin-top:15%;
         
 
     }
 
  }
+
+ /* Portrait and Landscape TABLET */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1023px)
+and (-webkit-min-device-pixel-ratio: 2){
+
+
+    .about{
+        background-position: center;
+        opacity:0.9;
+    }
+    .about_container{
+        width:75%;
+        padding-top: 12em;
+        margin-top:10%;
+
+        
+        
+
+    }
+
+
+
+}
 
  

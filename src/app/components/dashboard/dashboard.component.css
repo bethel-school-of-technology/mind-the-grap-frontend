@@ -1,24 +1,146 @@
-.breakDown{
-    margin-top: 5em;
-}
 .card{
     display:flex;
+    justify-content: center;
+    margin-top:2%;
+    background-color: lightslategray;
+    width:100%;
+    flex-flow: wrap ;
     flex-direction: row;
-    justify-content: space-between;
-    margin-left:2em;
-    margin-right:2em;
-    margin-top:2em;
+    border-radius: 5px;
+   
 }
+.card-text{
+    border-radius: 10px;
+}
+.breakDown .card-header{
+    box-shadow: 1px 2px grey;
+    border-radius: 3px;
+}
+.header{
+    border-radius: 3px;
+    color:black;
+    font-size: 30px;
+    opacity:.5;
+}
+.breakDown .header{
+    color: white;
+    font-size: 28px;
+}
+
+.results{
+    width:31.5%;
+    margin-right:2%;
+}
+.breakDown{
+    width:31.5%;
+}
+.breakDown{
+    display:flex;
     
+}
+.results{
+    display:flex;
+   
+}
+
+
+p a{
+    color: maroon;
+}
+
+
+
+.testimony{
+    align-items: center;
+    background-color: lightslategray;
+}
+.card-text{
+    text-indent: 15px;
+}
+.results .card-text{
+    padding-bottom:39%;
+
+}
+   
 /* Mobile */
  /* Portrait and Landscape */
  @media only screen 
  and (max-device-width: 425px){
+    
     .card{
          flex-direction: column;
-     }
+    }
     .breakDown{
         margin-top: 0em;
+        width:100%;
     }
- }
+   .results .header{
+    visibility: hidden;
+   }
+   .breakDown .header{
+    visibility: hidden;
+   }
+   .next .header{
+    visibility: hidden;
+   }
+   .results .card-text{
+    padding-bottom:10%;
+    }
+    .results{
+        width:100%;
+        margin-right:0%;
+    }
+   
+
+}
+
+  /* Portrait and Landscape TABLET */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1023px)
+and (-webkit-min-device-pixel-ratio: 2){
+
+    .card{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .results{
+        width:65%;
+    }
+    .breakDown{
+        width:65%;
+        margin-top: 0em;
+    }
     
+    .results .header{
+        visibility: hidden;
+       }
+       .breakDown .header{
+        visibility: hidden;
+       }
+       .next .header{
+        visibility: hidden;
+       }
+       .results .card-text{
+        padding-bottom:10%;
+    
+    }
+    .next, .testimony{
+        padding: 0% 5%;
+    }
+    .results{
+        margin-right:0%;
+    }
+ 
+  
+}
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1439px){
+    .breakDown, .results{
+        width:47.5%;
+    }
+
+}
+ 

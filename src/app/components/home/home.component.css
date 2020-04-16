@@ -1,66 +1,86 @@
 app-navbar{
-  position: fixed;
-  width:100%;  
+    position: fixed;
+    width:100%;  
+}
+.display-3{
+    font-weight: 300;
 }
 
 #hr{
     border-color: whitesmoke;
 }
 
-
 #test{
     border-radius: 5px;
 }
+
 .landing{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .landing_content{
-   width:45%;
+   width:55%;
    text-align: center;
 }
+
 .mtg{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .pastor{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.strong{
+.strong_container{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top:2em;
+    margin-top:2%;
+    
+}
+
+.strong{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top:1.5%;
     background-color: #EBEBEB;
     border-radius: 10px;
-    margin-left:33%;
-    margin-right:33%;
-    
+    width: 40%;
+    align-items: center;
+
     
 }
+    
 .strong_content{
-   background-color:#4E5D6C;
-    width:80%;
-    margin-bottom:1.5em;
+    background-color:#4E5D6C;
+    width:90%;
     border-radius: 10px;
-    padding:1em 1.2em 1em 1em;
+    align-items: center;
+    padding:1% 5%;
+    
+    margin-bottom: 3%;
+    
 }
+
 li{
     list-style-type: none;
     font-size: 10px;
     text-align: left;
 }
+
 i{
-font-size: 2em;
-color:#EBEBEB;
+    font-size: 2em;
+    color:#EBEBEB;
 }
 .jump{
     display:flex;
@@ -87,46 +107,78 @@ color:#EBEBEB;
  @media only screen 
  and (max-device-width: 425px){
 
-.mtg_content{
+    .mtg_content{
     width:80%;
     text-align: center;
-}
-.mtg_content h2{
+    }
+    
+    .mtg_content h2{
     font-size: 2.8em;
-}
-.pastor_content{
+    }
+    
+    .pastor_content{
     width:80%;
-}
-.pastor_content i{
+    }
+    
+    .pastor_content i{
     font-size: 1.4em;
-}
-.landing_content{
+    }
+    
+    .landing_content{
     width:90%;
     text-align: center;
-}
-.strong_content{
+    }
+    
+    .strong_content{
+    width:90%;
+    }
+    
+    .strong{
     width:90%;
     
-   
+    }
     
-}
-.strong{
-    width:90%;
-    margin-right:0em;
-    margin-left:1.3em;
-    
-   
-    
-}
-.jump_content{
+   .jump_content{
     width:80%;
-}
-#jumbo{
+    padding-top:1.5%;
+    }
+    #jumbo{
     padding-top:5em;
+    }
 }
 
+/* Portrait and Landscape TABLET */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1023px)
+and (-webkit-min-device-pixel-ratio: 2){
+
+    .mtg_content h2{
+        font-size:2.8em ;
+       }
+
+    .mtg_content{
+        width:60%;
+        text-align: center;
+    }
+    
+    .pastor_content p{
+        font-size: 1em;
+    }
+    .landing_content{
+        width:75%;
+    }
+    .strong_content{
+        margin-right:0em;
+    }
+    .strong{
+        width:60%;
+        
+    }
 
 
 
 
- }
+
+
+}
