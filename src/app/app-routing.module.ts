@@ -14,6 +14,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AssessmentEditComponent } from './components/assessment-edit/assessment-edit.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 import { ResultComponent } from './components/result/result.component';
+import {AuthGuard} from './service/auth.guard';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   },
   {
     path: 'question/:id',
-    component: QuestionsComponent
+    component: QuestionsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login', 
@@ -52,16 +54,20 @@ const routes: Routes = [
   //Dashboard
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'assessments',
-    component: AssessmentComponent
+    component: AssessmentComponent,
+    canActivate: [AuthGuard]
+    
   },
   //This page has the assessment loaded on it.
   {
     path: 'assessments/:title',
-    component: AssessmentEditComponent
+    component: AssessmentEditComponent,
+    canActivate: [AuthGuard]
   },
   //Profile + Profile Edit Page
   {
@@ -70,11 +76,8 @@ const routes: Routes = [
   },
   {
     path: 'profile_edit',
-    component: ProfileEditComponent
-  },
-  {
-    path: 'results', 
-    component: ResultComponent
+    component: ProfileEditComponent,
+    canActivate: [AuthGuard]
   }
 
 ];

@@ -18,7 +18,8 @@ export class ApiService {
   
   constructor(
     private http: HttpClient, 
-    private router: Router,) {}
+    private router: Router,
+    ) {}
 
 
   getUserId() {
@@ -65,7 +66,6 @@ export class ApiService {
   //}
 
   //new login logic
-
   logInUser(userData) {
     let url = `${this.endpoint}/login`
     return this.http.post<any>(url, { email: userData.email, password: userData.password })
@@ -81,6 +81,7 @@ export class ApiService {
             return user;
         }));
 }
+
 
 logout() {
     localStorage.removeItem('currentUser');
