@@ -22,6 +22,7 @@ import { UserNavbarComponent } from './components/user-navbar/user-navbar.compon
 import { QuestionService } from './service/question.service';
 import { AssessmentService } from './service/assessment.service';
 import { ResponseService } from './service/response.service';
+import {AuthGuard} from './service/auth.guard';
 
 
 
@@ -51,7 +52,7 @@ import { ResponseService } from './service/response.service';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ApiService, QuestionService, AssessmentService, ResponseService],
+  providers: [ApiService, QuestionService, AssessmentService, ResponseService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

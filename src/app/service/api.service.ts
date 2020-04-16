@@ -4,6 +4,7 @@ import { catchError, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
+import * as jwt_decode from 'jwt-decode';
 
 
 @Injectable({
@@ -17,8 +18,23 @@ export class ApiService {
   
   constructor(
     private http: HttpClient, 
-    private router: Router,) {}
+    private router: Router,
+    ) {}
 
+
+  getUserId() {
+    // console.log("Got to start of request.");
+    var token = localStorage.getItem('currentUser');
+    // console.log("Set Token Variable:");
+    // console.log(token);
+    // console.log("attempt to decode token:");
+    var decoded = jwt_decode(token);
+    // console.log("Decoded Token, should have user_id:") 
+    // console.log(decoded); 
+    var userId = decoded._id
+
+    return userId;
+  }
   // services go here... create, get, update, delete, errorhandling...
 
   // Create USER
@@ -29,9 +45,7 @@ export class ApiService {
   }
 // Update USER
   updateUser(userData): Observable<any> {
-    //Need user Id to dynamicly generate this URL 
-    var user_id = "5e85fedcd359371cd53d4e2d";
-    let url = `${this.endpoint}/profile_edit/` + user_id;
+    let url = `${this.endpoint}/profile_edit/` + this.getUserId();
     console.log(userData);
     return this.http.put(url, userData);
     
@@ -39,7 +53,9 @@ export class ApiService {
 
   // Get USER
   getUser(): Observable<any> {
-    let url = `${this.endpoint}/profile/5e854fca8df80a10a9eaf321`
+    let url = `${this.endpoint}/profile/` + this.getUserId();
+    // console.log("Url configured:");
+    // console.log(url);
     return this.http.get(url);
   }
 
@@ -47,30 +63,25 @@ export class ApiService {
   // logInUser(userData): Observable<any> {
   //   let url = `${this.endpoint}/login`
   //   return this.http.post(url, userData);
-
-   
-
   //}
 
   //new login logic
-
   logInUser(userData) {
     let url = `${this.endpoint}/login`
     return this.http.post<any>(url, { email: userData.email, password: userData.password })
         .pipe(map(user => {
             // login successful if there's a jwt token in the response
-            //console.log("userdata:");
-            //console.log(user);
+            // console.log("userdata:");
+            // console.log(user.token);
             if (user && user.token) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
-                //console.log("GOT HERE");
+                // console.log("GOT HERE");
                 localStorage.setItem('currentUser', JSON.stringify(user.token));
-
             }
-
             return user;
         }));
 }
+
 
 logout() {
     localStorage.removeItem('currentUser');
@@ -84,16 +95,16 @@ logout() {
 
   //Error handling
    errorMgmt(error: HttpErrorResponse) {
-     //let errorMessage = '';
-    //  if(error.error instanceof ErrorEvent) {
-    //    Get Client-side error
-    //     errorMessage = error.error.message;
-    //  } else {
-    //     Get server-side error
-    //  errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    //  }
-    //  console.log(errorMessage);
-    //    return throwError(errorMessage);
+     let errorMessage = '';
+     if(error.error instanceof ErrorEvent) {
+      //  Get Client-side error
+        errorMessage = error.error.message;
+     } else {
+        // Get server-side error
+     errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+     }
+     console.log(errorMessage);
+       return throwError(errorMessage);
    }
 
  
