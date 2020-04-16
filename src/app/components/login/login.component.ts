@@ -31,7 +31,7 @@ ngOnInit(){
 //logInUser found in api.service
   onSubmit() {
     //console.log('Submit Successful: ', this.model);
-    this.apiService.logInUser(this.model).subscribe((res: Response) => { this.router.navigate(['/dashboard']);
+    this.apiService.logInUser(this.model).subscribe((res: Response) => { this.router.navigate(['/assessments']);
     console.log(res);
     });
   }
