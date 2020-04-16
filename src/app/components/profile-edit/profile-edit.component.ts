@@ -37,9 +37,4 @@ export class ProfileEditComponent implements OnInit {
       });
      }
 
-//OLD onSubmit logic 
-//   onSubmit() {
-//     console.log('Update Successful: ', this.model);
-// }
-
 };
