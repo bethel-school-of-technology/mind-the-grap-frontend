@@ -23,3 +23,4 @@ export class ResultService {
     return this.http.post(this.resultUrl, resultBody);
   }
 }
+

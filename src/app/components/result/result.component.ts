@@ -15,8 +15,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ResultComponent implements OnInit {
   displayElement1 = false;
-  
- results: String;
+
+  results: String;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,19 +25,36 @@ export class ResultComponent implements OnInit {
     private http: HttpClient,
   ) { }
 
-  
 
-  getResults(assessment_id){
+
+  getResults(assessment_id) {
     var user_id = this.apiService.getUserId();
     this.resultService.getResults(assessment_id, user_id).subscribe((data) => {
       this.results = data;
-      
     })
+  }
+  displayResult() {
+    var bucket_response = this.getResults
+    var item_elements = document.querySelectorAll(".item");
+  
+        
+        if (bucket_response == "Bucket One") {
+          document.querySelector("." + bucket_response).style.display = "block";
+        } else if (bucket_response == "Bucket Two") {
+          document.querySelector("." + bucket_response).style.display = "block";
+        } else if (bucket_response == "Bucket Three") {
+          document.querySelector("." + bucket_response).style.display = "block";
+        } else if (bucket_response == "Bucket Four") {
+          document.querySelector("." + bucket_response).style.display = "block";
+        } else {
+          console.log("");
+        }
+      });
+    }
   }
 
 
-
-  ngOnInit(){
+  ngOnInit() {
     this.getResults('5e7ac57f79068f306068ab63');
   }
 

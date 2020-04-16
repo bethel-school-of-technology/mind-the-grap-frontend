@@ -78,6 +78,10 @@ const routes: Routes = [
     path: 'profile_edit',
     component: ProfileEditComponent,
     canActivate: [AuthGuard]
+  }, 
+  {
+    path: 'results', 
+    component: ResultComponent
   }
 
 ];

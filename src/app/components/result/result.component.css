@@ -1,0 +1,33 @@
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #313142;
+    width: 800px;
+    height: 680px;
+    display: flex;
+    border-radius: 15px;
+  }
+
+  .wrapper .wrapper_healthy {
+    width: 250px;
+    background: #393952;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 10px 0px 13px 0px rgba(41, 41, 57, 0.7);
+  }
+
+  .wrapper .wrapper_healthy .item.One  p {
+    background: #fff;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #abaacd;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  }
