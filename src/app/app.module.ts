@@ -21,6 +21,7 @@ import { ProfileEditComponent } from './components/profile-edit/profile-edit.com
 import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
 import { QuestionService } from './service/question.service';
 import { AssessmentService } from './service/assessment.service';
+import { ResultComponent } from './components/result/result.component';
 import { ResponseService } from './service/response.service';
 import {AuthGuard} from './service/auth.guard';
 
@@ -43,7 +44,8 @@ import {AuthGuard} from './service/auth.guard';
     AssessmentComponent,
     AssessmentEditComponent,
     ProfileEditComponent,
-    UserNavbarComponent
+    UserNavbarComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
