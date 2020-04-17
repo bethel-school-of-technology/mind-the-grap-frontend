@@ -45,8 +45,8 @@ export class ApiService {
   }
 // Update USER
   updateUser(userData): Observable<any> {
-    console.log("Got User Data");
-    console.log(userData);
+    // console.log("Got User Data");
+    // console.log(userData);
 
     var formattedData = {
       "first_name": userData.first_name,
@@ -56,8 +56,7 @@ export class ApiService {
 
     let url = `${this.endpoint}/profile_edit/` + this.getUserId();
     // console.log(userData);
-    return this.http.put(url, formattedData);
-    
+    return this.http.put(url, formattedData);   
   }
 
   // Get USER
@@ -68,13 +67,7 @@ export class ApiService {
     return this.http.get(url);
   }
 
-// Login USER
-  // logInUser(userData): Observable<any> {
-  //   let url = `${this.endpoint}/login`
-  //   return this.http.post(url, userData);
-  //}
-
-  //new login logic
+  // LogIn USER 
   logInUser(userData) {
     let url = `${this.endpoint}/login`
     return this.http.post<any>(url, { email: userData.email, password: userData.password })
@@ -89,14 +82,14 @@ export class ApiService {
             }
             return user;
         }));
-}
+  }
 
 
-logout() {
+  logout() {
     localStorage.removeItem('currentUser');
     //return this.http.get(`/home`);
    this.router.navigate(['/home']);
-}
+  }
 
   getQuestions(){
     return this.http.get(`/api/questions`);
@@ -109,7 +102,7 @@ logout() {
       //  Get Client-side error
         errorMessage = error.error.message;
      } else {
-        // Get server-side error
+      // Get server-side error
      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
      }
      console.log(errorMessage);

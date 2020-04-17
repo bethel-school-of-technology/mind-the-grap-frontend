@@ -13,6 +13,9 @@ export class UserNavbarComponent implements OnInit {
   
   user: User = new User();
 
+  userId: String;
+
+
   constructor( 
     private apiService: ApiService,
     private http: HttpClient
