@@ -7,7 +7,7 @@ a.status-btn{
     text-decoration: none;
 }
 
-a.status-btn:hover {
+a.status-btn:hover{
     padding: 5px;
     border: solid #FFF 1px;
     background-color: #FFF;
@@ -16,6 +16,6 @@ a.status-btn:hover {
     text-decoration: none;
 }
 
-.center {
+.center{
     text-align: center;
 }
