@@ -32,14 +32,11 @@ export class ProfileEditComponent implements OnInit {
 
   onSubmit() {
     console.log('Your updated information : ', this.model);
-    console.log(this.model );
-    this.apiService.updateUser(this.model).subscribe((res: Response) => { this.router.navigate(['/profile']);
+    console.log(this.model);
+    var userId = this.apiService.getUserId();
+    this.apiService.updateUser(this.model).subscribe((res: Response) => { this.router.navigate(['/profile/:id' + userId]);
       });
      }
-
-//OLD onSubmit logic 
-//   onSubmit() {
-//     console.log('Update Successful: ', this.model);
-// }
+     
 
 };

@@ -1,54 +1,481 @@
 <app-user-navbar></app-user-navbar>
-<div class="start">
-  <a class="btn btn-primary" type="button" href="/assessments" routerLink="/assessments" routerLinkActive="active">Start The Assessment!</a>
-</div>
-<div class="card">
-  <div class="results">
-  <div class="card text-white bg-light mb-3" >
-    <div class="card-body">
-      <h4 class="card-title">Here Are Your Results:</h4>
-      <p class="card-text">According to your responses, it appears you are at risk of burning out:(
-      </p>
-    </div>
-    <div class="header">&#8594;</div>
-  </div>
-  </div>
-  <div class="breakDown">
-    <div class="card text-white bg-secondary mb-3" >
-      <div class="card-body">
-        <h4 class="card-title">The Break Down:</h4>
-        <p class="card-text"> Have you noticed your productivity dropping off? Have you started avoiding spending time with people because they drain you? Burnout is becoming a pandemic among ministry leaders, and you may be at risk of becoming a statistic. Your joy is disappearing, your anger is rising, and your cynicism is starting to become palpable. As ministry leaders, we are always trying to keep up with the avalanche of tasks and issues that come our way every day. This is prime ground for becoming another statistic as a pastor who suffered burnout. 
-        </p>
+<ng-template [ngIf]="result == 'Bucket One'">
+  <div class="card">
+    <div class="results">
+      <div class="card text-white bg-light mb-3">
+        <div class="card-body">
+          <h4 class="card-title">Here Are Your Results:</h4>
+          <p>{{ result }} </p>
+          <p class="card-text">
+            According to your responses, you appear to have things operating in the right direction 
+            and need a customized experience to pinpoint the areas of your ministry and leadership 
+            that need finetuning. High performing vehicles remain high performing by getting tuned 
+            regularly. It doesn’t appear you need any major interventions, at this point, and now is 
+            the time to take preventative measures to avoid major interventions down the road. 
+          </p>
+        </div>
+        <div class="header">&#8594;</div>
       </div>
-      <div class="header">&#8595;</div>
     </div>
+    <div class="breakDown">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+          <h4 class="card-title">The Break Down:</h4>
+          <p class="card-text">
+            You are feeling good about your ministry. Things seem to be working well, everything is 
+            headed in the right direction, and you feel God in the midst of what is happening. Maybe, 
+            at times, you feel as though you need to keep up with what is happening, but right now you 
+            feel you are doing well. You aren’t sure ministry can get any better for you, but deep down 
+            inside you know that it can. 
+          </p>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
     </div>
     <div class="next">
       <div class="card text-white bg-warning mb-3" style="max-width: 62rem;">
         <div class="card-body">
           <h4 class="card-title">This Is What's Next:</h4>
-          <p class="card-text"> Risking burnout is a common challenge of ministry leaders, so know you are not alone. Here are some steps you need to take to combat burnout:
-            Learn to pace yourself: not everything needs to be done. Just because someone has an emergency doesn’t mean it needs to become your emergency. Focus on the things you need to and don’t take on more than you can handle.
-            Delegate to others: Do not be afraid to hand things off to others and allow them to take some of the load. You do not need to do everything, and you shouldn’t. Hand things off to allow others to shine and live out their calling. 
-            Take a vacation: If you haven’t taken one in awhile you are way overdue. If you just took a vacation, you need to take another one.
-            Enroll in the <a href="http://brandonpardekooper.com/productivepastor/" target="_blank"> "Productive Pastor." </a> This will give you access to a proven 5 step productivity system, productivity coaching, and two courses to enhance your ministry leadership. 
-            Consider <a href="http://moderninklings.com/coach/" target="_blank">Personal Coaching</a>  to help you combat potential burnout. With a customized process designed for your specific situation, this coaching process will turn your burnout into fulfillment in your ministry. 
-            </p>
-          </div>
-          <div class="header">&#8595;</div>
+          <p class="card-text">
+            Being in a healthy place in ministry is wonderful and should be celebrated. However, 
+            it is also a difficult place to be. Too often pastors go on autopilot when they reach 
+            this place, only to find themselves falling apart a few years later because they didn’t 
+            maintain themselves as ministry leaders. 
+            Be thankful to God for the place he has brought you to in your ministry. 
+            Hire a counselor to serve as a guard against the mental challenges and strain ministry 
+            can have on pastors. 
+            Consider personal coaching to help you remain the healthy pastor you currently are. 
+            With a customized process designed for your specific situation, this <a href="http://moderninklings.com/coach/" target="_blank">coaching experience</a>  
+            will provide you with new tools that will enhance your ministry. 
+          </p>
         </div>
+        <div class="header">&#8595;</div>
+      </div>
     </div>
-  <div class="testimony">
-<div class="card text-white bg-secondary mb-3" style="max-width: 62rem;">
-  <div class="card-body">
-    <h4 class="card-title">Testimonies:</h4>
-    <p class="card-text">
-      The Mind the Gap Assessment helps pastors like you gain clarity on the challenges they face so they can avoid burnout and reach their communities. 
-Pastor, by taking this assessment, you will gain clarity on the area where you are most susceptible to hindering your ministry.
- Just as you visit your doctor to check for signs you may be running the risk of a heart attack, this assessment checks for signs where you and your ministry are susceptible.
-  Mind the Gap is committed to giving pastors confidence by equipping them for ministry. 
-      </p>
+    <div class="testimony">
+      <div class="card text-white bg-secondary mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">Testimonies:</h4>
+          <p class="card-text">
+            The Mind the Gap Assessment helps pastors like you gain clarity on the challenges they face so they can
+            avoid
+            burnout and reach their communities.
+            Pastor, by taking this assessment, you will gain clarity on the area where you are most susceptible to
+            hindering your ministry.
+            Just as you visit your doctor to check for signs you may be running the risk of a heart attack, this
+            assessment checks for signs where you and your ministry are susceptible.
+            Mind the Gap is committed to giving pastors confidence by equipping them for ministry.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
+</ng-template>
+
+<ng-template [ngIf]="result == 'Bucket Two'">
+  <div class="card">
+    <div class="results">
+      <div class="card text-white bg-light mb-3">
+        <div class="card-body">
+          <h4 class="card-title">Here Are Your Results:</h4>
+          <p>{{ result }} </p>
+          <p class="card-text">
+            Based on your responses, it is likely your level of ministry has exceeded your level of training. 
+          </p>
+        </div>
+        <div class="header">&#8594;</div>
+      </div>
+    </div>
+    <div class="breakDown">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+          <h4 class="card-title">The Break Down:</h4>
+          <p class="card-text"> 
+            Congratulations, you find yourself in a unique place in ministry. Your faithfulness and service to 
+            God have brought you to a place in ministry beyond what your training has prepared you for. This is 
+            not a bad place to be, but it is a critical place. You are at a crossroads. Will you try to pretend 
+            you have it all together and hope it all makes sense in time, or will you be intentional about being 
+            a learner and bringing your skills to a new level? If you choose the former, you will most likely end 
+            up in burnout, but if you choose the latter, then you will discover all God wants to use you for. 
+          </p>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="next">
+      <div class="card text-white bg-warning mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">This Is What's Next:</h4>
+          <p class="card-text"> 
+            God has blessed you and your ministry, but do not let ego, pride, or 
+            insecurity get in the way of him continuing to bless you. Be proactive about improving yourself:
+          </p>
+          <ul>
+            <li>
+              Enroll in a higher education program and earn a degree
+            </li>
+            <li>
+              Attend conferences, seminars, or roundtable events for pastors
+            </li>
+            <li>
+              Enroll in <a href="https://university.moderninklings.com/bundles/expeditionlife" target="_blank">“Expedition Life”</a>. 
+              This is a ministry development process that has been used to train hundreds of pastors and ministry leaders 
+              to increase their skills and abilities to avoid burnout and ineffectiveness in ministry. 
+            </li>
+            <li> 
+              Enroll in the <a href="http://brandonpardekooper.com/productivepastor/" target="_blank"> “Productive Pastor” </a>. This will give you access to a proven 5 step productivity system, 
+              productivity coaching, and two courses to enhance your ministry leadership. 
+            </li>
+          </ul>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="testimony">
+      <div class="card text-white bg-secondary mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">Testimonies:</h4>
+          <p class="card-text">
+            The Mind the Gap Assessment helps pastors like you gain clarity on the challenges they face so they can
+            avoid
+            burnout and reach their communities.
+            Pastor, by taking this assessment, you will gain clarity on the area where you are most susceptible to
+            hindering your ministry.
+            Just as you visit your doctor to check for signs you may be running the risk of a heart attack, this
+            assessment checks for signs where you and your ministry are susceptible.
+            Mind the Gap is committed to giving pastors confidence by equipping them for ministry.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="result == 'Bucket Three'">
+  <div class="card">
+    <div class="results">
+      <div class="card text-white bg-light mb-3">
+        <div class="card-body">
+          <h4 class="card-title">Here Are Your Results:</h4>
+          <p>{{ result }} </p>
+          <p class="card-text">
+            Based on your responses, it appears your leadership style may not fit the ministry you are serving in today. 
+          </p>
+        </div>
+        <div class="header">&#8594;</div>
+      </div>
+    </div>
+    <div class="breakDown">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+          <h4 class="card-title">The Break Down:</h4>
+          <p class="card-text"> Leadership style should be adaptive to the situation we find ourselves serving. 
+            As pastors and ministry leaders, we should be able to step into whatever leadership role we need to for
+             our given situation. At times, we fall into leadership ruts where we operate out of the same approach 
+             regardless of our situation, and there is a disconnect. Many of us come to points as pastors where we 
+             need someone to speak into our leadership approach and help us shift, adapt, or adjust how we are leading 
+             to allow God to accomplish His goals in the lives of the people we have been asked to lead. 
+          </p>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="next">
+      <div class="card text-white bg-warning mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">This Is What's Next:</h4>
+          <p class="card-text"> 
+            Your leadership should be adaptive and shift. When you have a toolbox full of different leadership 
+            approaches, you position yourself to be used by God in any situation. When our leadership approach 
+            is not working effectively, the adjustment that needs to be made is in us, not in the people around us. 
+            We need to be proactive about making the adjustment.
+          </p>
+          <ul>
+            <li>
+              Do a 360-degree leadership assessment of yourself by asking your team members, volunteers under you, 
+              your board, and anyone else that sees your leadership in action what they think about your leadership approach. 
+            </li>
+            <li>
+              Challenge yourself to become familiar with different leadership approaches and styles and see 
+              if you can identify the best one for your current situation. 
+            </li>
+            <li>
+              Enroll in<a href="https://university.moderninklings.com/bundles/expeditionlife" target="_blank">“Expedition Life”</a> . This is a ministry development process 
+              that has been used to train hundreds of pastors and ministry leaders to increase their skills and abilities to avoid burnout and ineffectiveness in ministry.  
+            </li>
+            <li>
+              Consider personal coaching to help you make the necessary adjustment you need. With a customized process designed for your specific situation, this <a href="http://moderninklings.com/coach/" target="_blank">coaching experience</a> will provide you with new tools that will enhance your ministry. 
+            </li>
+          </ul>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="testimony">
+      <div class="card text-white bg-secondary mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">Testimonies:</h4>
+          <p class="card-text">
+            The Mind the Gap Assessment helps pastors like you gain clarity on the challenges they face so they can
+            avoid
+            burnout and reach their communities.
+            Pastor, by taking this assessment, you will gain clarity on the area where you are most susceptible to
+            hindering your ministry.
+            Just as you visit your doctor to check for signs you may be running the risk of a heart attack, this
+            assessment checks for signs where you and your ministry are susceptible.
+            Mind the Gap is committed to giving pastors confidence by equipping them for ministry.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- <ng-template [ngIf]="result == 'Bucket Three'">
+  <div class="card">
+    <div class="results">
+      <div class="card text-white bg-light mb-3">
+        <div class="card-body">
+          <h4 class="card-title">Here Are Your Results:</h4>
+          <p>{{ result }} </p>
+          <p class="card-text">According to your responses, it appears you are at risk of burning out:(
+          </p>
+        </div>
+        <div class="header">&#8594;</div>
+      </div>
+    </div>
+    <div class="breakDown">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+          <h4 class="card-title">The Break Down:</h4>
+          <p class="card-text"> Have you noticed your productivity dropping off? Have you started avoiding spending time
+            with people because they drain you? Burnout is becoming a pandemic among ministry leaders, and you may be at
+            risk of becoming a statistic. Your joy is disappearing, your anger is rising, and your cynicism is starting
+            to
+            become palpable. As ministry leaders, we are always trying to keep up with the avalanche of tasks and issues
+            that come our way every day. This is prime ground for becoming another statistic as a pastor who suffered
+            burnout.
+          </p>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="next">
+      <div class="card text-white bg-warning mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">This Is What's Next:</h4>
+          <p class="card-text"> Risking burnout is a common challenge of ministry leaders, so know you are not alone.
+            Here
+            are some steps you need to take to combat burnout:
+            Learn to pace yourself: not everything needs to be done. Just because someone has an emergency doesn’t mean
+            it
+            needs to become your emergency. Focus on the things you need to and don’t take on more than you can handle.
+            Delegate to others: Do not be afraid to hand things off to others and allow them to take some of the load.
+            You
+            do not need to do everything, and you shouldn’t. Hand things off to allow others to shine and live out their
+            calling.
+            Take a vacation: If you haven’t taken one in awhile you are way overdue. If you just took a vacation, you
+            need
+            to take another one.
+            Enroll in the <a href="http://brandonpardekooper.com/productivepastor/" target="_blank"> "Productive
+              Pastor."
+            </a> This will give you access to a proven 5 step productivity system, productivity coaching, and two
+            courses
+            to enhance your ministry leadership.
+            Consider <a href="http://moderninklings.com/coach/" target="_blank">Personal Coaching</a> to help you combat
+            potential burnout. With a customized process designed for your specific situation, this coaching process
+            will
+            turn your burnout into fulfillment in your ministry.
+          </p>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="testimony">
+      <div class="card text-white bg-secondary mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">Testimonies:</h4>
+          <p class="card-text">
+            The Mind the Gap Assessment helps pastors like you gain clarity on the challenges they face so they can
+            avoid
+            burnout and reach their communities.
+            Pastor, by taking this assessment, you will gain clarity on the area where you are most susceptible to
+            hindering your ministry.
+            Just as you visit your doctor to check for signs you may be running the risk of a heart attack, this
+            assessment checks for signs where you and your ministry are susceptible.
+            Mind the Gap is committed to giving pastors confidence by equipping them for ministry.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template> -->
+
+<ng-template [ngIf]="result == 'Bucket Four'">
+  <div class="card">
+    <div class="results">
+      <div class="card text-white bg-light mb-3">
+        <div class="card-body">
+          <h4 class="card-title">Here Are Your Results:</h4>
+          <p>{{ result }} </p>
+          <p class="card-text">According to your responses, it appears you are at risk of burning out:(
+          </p>
+        </div>
+        <div class="header">&#8594;</div>
+      </div>
+    </div>
+    <div class="breakDown">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+          <h4 class="card-title">The Break Down:</h4>
+          <p class="card-text"> Have you noticed your productivity dropping off? Have you started avoiding spending time
+            with people because they drain you? Burnout is becoming a pandemic among ministry leaders, and you may be at
+            risk of becoming a statistic. Your joy is disappearing, your anger is rising, and your cynicism is starting
+            to
+            become palpable. As ministry leaders, we are always trying to keep up with the avalanche of tasks and issues
+            that come our way every day. This is prime ground for becoming another statistic as a pastor who suffered
+            burnout.
+          </p>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="next">
+      <div class="card text-white bg-warning mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">This Is What's Next:</h4>
+          <p class="card-text"> Risking burnout is a common challenge of ministry leaders, so know you are not alone.
+            Here
+            are some steps you need to take to combat burnout:
+            Learn to pace yourself: not everything needs to be done. Just because someone has an emergency doesn’t mean
+            it
+            needs to become your emergency. Focus on the things you need to and don’t take on more than you can handle.
+            Delegate to others: Do not be afraid to hand things off to others and allow them to take some of the load.
+            You
+            do not need to do everything, and you shouldn’t. Hand things off to allow others to shine and live out their
+            calling.
+            Take a vacation: If you haven’t taken one in awhile you are way overdue. If you just took a vacation, you
+            need
+            to take another one.
+            Enroll in the <a href="http://brandonpardekooper.com/productivepastor/" target="_blank"> "Productive
+              Pastor."
+            </a> This will give you access to a proven 5 step productivity system, productivity coaching, and two
+            courses
+            to enhance your ministry leadership.
+            Consider <a href="http://moderninklings.com/coach/" target="_blank">Personal Coaching</a> to help you combat
+            potential burnout. With a customized process designed for your specific situation, this coaching process
+            will
+            turn your burnout into fulfillment in your ministry.
+          </p>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="testimony">
+      <div class="card text-white bg-secondary mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">Testimonies:</h4>
+          <p class="card-text">
+            The Mind the Gap Assessment helps pastors like you gain clarity on the challenges they face so they can
+            avoid
+            burnout and reach their communities.
+            Pastor, by taking this assessment, you will gain clarity on the area where you are most susceptible to
+            hindering your ministry.
+            Just as you visit your doctor to check for signs you may be running the risk of a heart attack, this
+            assessment checks for signs where you and your ministry are susceptible.
+            Mind the Gap is committed to giving pastors confidence by equipping them for ministry.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="result == 'Bucket Five'">
+  <div class="card">
+    <div class="results">
+      <div class="card text-white bg-light mb-3">
+        <div class="card-body">
+          <h4 class="card-title">Here Are Your Results:</h4>
+          <p>{{ result }} </p>
+          <p class="card-text">
+            According to your responses, it appears you may be struggling with feelings of loneliness.
+          </p>
+        </div>
+        <div class="header">&#8594;</div>
+      </div>
+    </div>
+    <div class="breakDown">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+          <h4 class="card-title">The Break Down:</h4>
+          <p class="card-text">
+            Do you find yourself struggling to get restful sleep? Are you spending more time in the shower or 
+            drinking more hot beverages? This may mean you are attempting to replace social warmth with physical warmth. 
+            Being a pastor can be a lonely journey at times, and sometimes even family are unable to combat our feelings 
+            of loneliness. Too often, as pastors, we have been serving others for so long, with too few breaks, that our 
+            tanks are empty and need to be filled with social interaction. Unfortunately, this isn’t always easy because 
+            of our role as spiritual leaders, no one really understands the weight we carry or can relate to the struggles 
+            we face in ministry on a day-to-day basis.
+          </p>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="next">
+      <div class="card text-white bg-warning mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">This Is What's Next:</h4>
+          <p class="card-text"> You are not alone, it only feels like it. Here are steps you need to 
+            take stop your feelings of loneliness and get back on track:
+          </p>
+          <ul>
+            <li>
+              Reach out to other pastors and build relationships. 
+            </li>
+            <li>
+              Cut down your social media interaction and start spending time with real people. 
+            </li>
+            <li>
+              Begin smiling and complementing those around you...particularly your ministry team and volunteers
+            </li>
+            <li>
+              Walk and look around you. Take time to notice the things around you that bring you joy, happiness, and fill you with wonder.
+            </li>
+            <li>
+              <a href="https://university.moderninklings.com/courses/challenge-negative-thinking" target="_blank">“Challenge Negative Thinking”</a> Receive tools to help you with the mental
+               battle that causes us to spiral into loneliness, depression, and unhealthy habits. 
+            </li>
+          </ul>
+        </div>
+        <div class="header">&#8595;</div>
+      </div>
+    </div>
+    <div class="testimony">
+      <div class="card text-white bg-secondary mb-3" style="max-width: 62rem;">
+        <div class="card-body">
+          <h4 class="card-title">Testimonies:</h4>
+          <p class="card-text">
+            The Mind the Gap Assessment helps pastors like you gain clarity on the challenges they face so they can
+            avoid
+            burnout and reach their communities.
+            Pastor, by taking this assessment, you will gain clarity on the area where you are most susceptible to
+            hindering your ministry.
+            Just as you visit your doctor to check for signs you may be running the risk of a heart attack, this
+            assessment checks for signs where you and your ministry are susceptible.
+            Mind the Gap is committed to giving pastors confidence by equipping them for ministry.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="result == 'Assessment Not Taken'">
+  <div class="card">
+    <div class="start">
+      <a class="btn btn-primary" type="button" href="/assessments" routerLink="/assessments" routerLinkActive="active">Start
+        The Assessment!</a>
+    </div>
+  </div>
+</ng-template>
