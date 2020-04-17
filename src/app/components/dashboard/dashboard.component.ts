@@ -39,7 +39,8 @@ export class DashboardComponent implements OnInit {
           if (result != "No Assessment Taken") {
             console.log("result:");
             console.log(result);
-            this.result = result;
+            this.result = "Bucket Four";
+           // result;
             // this.result = "Assessment Not Taken";
           }
         });

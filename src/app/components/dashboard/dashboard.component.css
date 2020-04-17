@@ -36,41 +36,118 @@ margin-top: 1%;
     font-size: 30px;
     opacity:.5;
 }
-.breakDown .header{
-    color: white;
-    font-size: 28px;
-}
 
 .results{
     width:31.5%;
     margin-right:2%;
-}
-.breakDown{
-    width:31.5%;
-}
-.breakDown{
     display:flex;
-    
-}
-.results{
-    display:flex;
-   
 }
 
+
+#one #result {
+    font-size: 1.59em;
+    padding: 2.5em .25em 2em .25em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#three p{
+    font-size: 1.59em;
+    padding: 2.5em .25em 2em .25em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#four p {
+    font-size: 1.59em;
+    padding: 2.5em .25em 2em .25em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#result {
+    font-size: 2em;
+    padding: 3em .25em 2em .25em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.breakDown{
+    width:31.5%;
+    display:flex;
+}
+
+.breakDown p {
+    font-size: 1.25em; 
+}
+
+.breakDown #one p {
+    font-size: 1.49em;
+    padding: 2em .25em .25em .25em;
+}
+.breakDown .header{
+    color: white;
+    font-size: 28px;
+}
+.next #one p {
+    font-size: 1.3em;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+}
+
+.next #four p {
+    font-size: 1.em;
+    font-weight: 800;
+    text-align: center;
+    color: black;
+}
+.next #four li {
+    text-align: left;
+    font-size: 1.3em;
+    padding: .2em;
+    font-weight: 650;
+    color: black;
+}
+
+.next #next p {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+}
+
+#next li {
+    font-size: 1.5em;
+    color: rgb(48, 47, 47);
+}
+
+h4 {
+    font-weight: 900;
+    padding: .09em;
+}
+
+#testimony p {
+    font-size: 1.1em;
+    font-weight: 400;
+    text-align: center;
+}
+
+#testimony h4 {
+    font-weight: 900;
+    padding: .09em;
+}
 
 p a{
     color: maroon;
 }
 
 
-
 .testimony{
     align-items: center;
     background-color: lightslategray;
 }
-.card-text{
-    text-indent: 15px;
-}
+
 .results .card-text{
     padding-bottom:39%;
 
