@@ -173,11 +173,16 @@ i{
     }
     
     .strong_content{
-    width:90%;
+    width:100%;
+   
+    }
+
+    .strong_container{
+        margin-top:0%; 
     }
     
     .strong{
-    width:90%;
+    width:100%;
     }
     
    .jump_content{
@@ -215,10 +220,14 @@ and (-webkit-min-device-pixel-ratio: 2){
 
     .strong_content{
         margin-right:0em;
+        
     }
 
     .strong{
-        width:60%;
+        width:100%;
+    }
+    .strong_container{
+        width:100%;
     }
 }
 /*Desktop*/
