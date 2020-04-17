@@ -41,7 +41,7 @@ export class ProfileComponent implements OnInit {
   }
 
   getUser(){
-    let user_id = "123456789"
+    //let user_id = "123456789"
     this.apiService.getUser().subscribe((data) => {
       this.model = data;
     })

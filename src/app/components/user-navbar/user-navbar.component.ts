@@ -10,14 +10,24 @@ import { ActivatedRoute } from '@angular/router'; 
 })
 export class UserNavbarComponent implements OnInit {
 
+  userId: String;
+
+
   constructor( 
     private apiService: ApiService,
     private http: HttpClient
     ) {}
 
   ngOnInit() {
-
+    this.getUserId();
   }
+
+  getUserId() {
+    this.apiService.getUser().subscribe((data) => {
+      this.userId = data;
+    })
+  }
+
 
   onLogout() {
    console.log("trying to logout");

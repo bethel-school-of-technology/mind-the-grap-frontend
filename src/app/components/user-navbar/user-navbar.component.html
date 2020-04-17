@@ -9,7 +9,7 @@
       <a class="nav-link" data-toggle="tab" href="/home" routerLink="/home" routerLinkActive="active">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="/profile/:id" routerLink="/profile/:id" routerLinkActive="active">Profile</a>
+      <a class="nav-link" data-toggle="tab" href="/profile/{{userId}}" [routerLink]="['/profile', userId]" routerLinkActive="active">Profile</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="/dashboard" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
