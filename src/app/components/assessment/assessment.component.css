@@ -19,3 +19,21 @@ a.status-btn:hover{
 .center{
     text-align: center;
 }
+
+.card {
+    display: flex;
+}
+.results {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.assessment-card {
+    display: flex;
+    width: 30%;
+    padding-right: 3em;
+    padding-left: 3em;
+    flex-direction: row;
+}
+
