@@ -1,6 +1,7 @@
 app-navbar{
     position: fixed;
-    width:100%;  
+    width:100%;
+    z-index: 5;  
 }
 .jumbotron{
 background-image: url("../../../assets/images/gap.JPG");
@@ -40,8 +41,23 @@ h5{
 }
 
 .landing_content{
-   width:55%;
+   width:80%;
    text-align: center;
+   padding-top: 2em;
+   padding-bottom: 2em;
+}
+
+ul.lead {
+    justify-content: center;
+    align-items: center;
+}
+ul:li {
+    justify-content: center;
+    align-items: center;
+}
+
+.lead p i {
+    font-size: 1em;
 }
 
 .mtg{
@@ -82,8 +98,8 @@ h5{
     border-radius: 10px;
     align-items: center;
     padding-top:1%;
-    padding-right:5%; 
-    margin-bottom: 3%;
+    padding-right:2%; 
+    margin-bottom: 5%;
     opacity: .65;
 }
 
@@ -128,7 +144,11 @@ i{
 /* Mobile */
  /* Portrait and Landscape */
  @media only screen 
- and (max-device-width: 425px){
+ and (max-device-width: 600px){
+
+    /* .display-3 {
+        padding-top: 2em;
+    } */
 
     .mtg_content{
     width:80%;
