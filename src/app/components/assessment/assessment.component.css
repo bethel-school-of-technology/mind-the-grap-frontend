@@ -36,4 +36,66 @@ a.status-btn:hover{
     padding-left: 3em;
     flex-direction: row;
 }
+/*Desktop*/
+@media only screen  and (min-width : 1024px){
+    .card{
+        width:90%;
+    }
+    .results{
+        width:50%;
+        margin-left:12em;
+    }
+    .assessment-card{
+        width:90%;
+    }
+  
+}
 
+/* Portrait and Landscape TABLET */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1023px)
+and (-webkit-min-device-pixel-ratio: 2){
+
+    .card{
+        width:90%;
+    }
+    .results{
+        width:90%;
+        margin-left:4em;
+    }
+    .assessment-card{
+        width:90%;
+    }
+  
+}
+
+/* Mobile */
+ /* Portrait and Landscape */
+ @media only screen 
+ and (max-device-width: 600px){
+
+    .card{
+        width:100%;
+    }
+    .results{
+        width:100%;
+        
+    }
+    .assessment-card{
+        width:100%;
+    }
+
+
+ }
+
+ /* Large Screens */
+@media only screen  and (min-width : 1440px){
+    
+    
+    .results{
+        
+        margin-left:22em;
+        
+    }
+}
