@@ -38,8 +38,7 @@ export class ResultComponent implements OnInit {
 
 
   ngOnInit(){
- phase2-securingRoutes
-    this.getResults('5e97ce5e8e4541ad57bf29f3');
+    // this.getResults('5e97ce5e8e4541ad57bf29f3');
   }
 
 }
