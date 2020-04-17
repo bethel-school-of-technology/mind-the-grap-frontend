@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/api.service';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router'; 
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-user-navbar',
@@ -9,6 +10,8 @@ import { ActivatedRoute } from '@angular/router'; 
   styleUrls: ['./user-navbar.component.css']
 })
 export class UserNavbarComponent implements OnInit {
+  
+  user: User = new User();
 
   userId: String;
 
@@ -19,15 +22,14 @@ export class UserNavbarComponent implements OnInit {
     ) {}
 
   ngOnInit() {
-    this.getUserId();
+    this.getUser();
   }
 
-  getUserId() {
+  getUser() {
     this.apiService.getUser().subscribe((data) => {
-      this.userId = data;
+      this.user = data;
     })
   }
-
 
   onLogout() {
    console.log("trying to logout");
