@@ -1,15 +1,12 @@
-
-
-
 .start{
 display:flex;
 justify-content: center;
 margin-top: 1%;
 }
+
 .start a{
     border-radius: 3px;
 }
-
 
 .card{
     display:flex;
@@ -20,16 +17,18 @@ margin-top: 1%;
     flex-flow: wrap ;
     flex-direction: row;
     border-radius: 5px;
-   
 }
+
 .card-text{
     border-radius: 10px;
     
 }
+
 .breakDown .card-header{
     box-shadow: 1px 2px grey;
     border-radius: 3px;
 }
+
 .header{
     border-radius: 3px;
     color:black;
@@ -150,16 +149,6 @@ p a{
 
 .results .card-text{
     padding-bottom:39%;
-
-}
-/* 1024px Resolution*/
-@media only screen
-and (min-device-width: 1024px){
-    .breakDown, .results{
-        width:47.4%;
-    }
-
-
 }
    
 /* Mobile */
@@ -170,31 +159,35 @@ and (min-device-width: 1024px){
     .card{
          flex-direction: column;
     }
+
     .breakDown{
         margin-top: 0em;
         width:100%;
     }
+
    .results .header{
     visibility: hidden;
    }
+
    .breakDown .header{
     visibility: hidden;
    }
+
    .next .header{
     visibility: hidden;
    }
+
    .results .card-text{
     padding-bottom:10%;
     }
+
     .results{
         width:100%;
         margin-right:0%;
     }
-   
-
 }
-
-  /* Portrait and Landscape TABLET */
+   
+/* Portrait and Landscape TABLET */
 @media only screen
 and (min-device-width: 768px)
 and (max-device-width: 1023px)
@@ -205,42 +198,74 @@ and (-webkit-min-device-pixel-ratio: 2){
         justify-content: center;
         flex-direction: column;
     }
+
     .results{
-        width:65%;
+        width:90%;
+        margin-top:1%;
     }
+
     .breakDown{
-        width:65%;
+        width:90%;
         margin-top: 0em;
     }
-    
+
     .results .header{
         visibility: hidden;
-       }
-       .breakDown .header{
+    }
+
+    .breakDown .header{
         visibility: hidden;
-       }
-       .next .header{
+    }
+
+    .next .header{
         visibility: hidden;
        }
        .results .card-text{
         padding-bottom:10%;
     
     }
+
     .next, .testimony{
         padding: 0% 5%;
     }
+
     .results{
         margin-right:0%;
     }
- 
-  
 }
-@media only screen
-and (min-device-width: 1025px)
-and (max-device-width: 1440px){
+/*Desktop*/
+@media only screen  and (min-width : 1024px){
+    
+    .breakDown, .results{
+        width:47.5%;
+    }
+}
+ 
+/* Large Screens */
+@media only screen  and (min-width : 1440px){
+    
     .breakDown, .results{
         width:33.5%;
     }
+}
+
+/*4k*/
+/* Large screens */
+@media only screen  and (min-width : 1824px){
+
+    .next{
+        margin-right:1%;
+        width:33.5%;
+    }
+
+    .testimony{
+        margin-left:1%;
+        width:33.5%;
+    }
+
+
+
+
 
 }
- 
+        

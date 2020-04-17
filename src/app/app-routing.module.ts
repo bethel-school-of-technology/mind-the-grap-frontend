@@ -18,7 +18,7 @@ import {AuthGuard} from './service/auth.guard';
 
 
 const routes: Routes = [
-  // user signup page
+  // User Signup Page
   {
     path: 'signUp',
     component: SignUpComponent

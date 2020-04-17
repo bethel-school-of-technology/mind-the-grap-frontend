@@ -2,6 +2,18 @@ app-navbar{
     position: fixed;
     width:100%;  
 }
+.jumbotron{
+background-image: url("../../../assets/images/gap.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    display:flex;
+    text-align: center;
+    flex-flow: column;
+    align-items: center;
+}
 .display-3{
     font-weight: 300;
 }
@@ -12,6 +24,12 @@ app-navbar{
 
 #test{
     border-radius: 5px;
+}
+
+h5{
+    color:black;
+    opacity: .85;
+    font-weight: 600;
 }
 
 .landing{
@@ -39,13 +57,13 @@ app-navbar{
     justify-content: center;
     align-items: center;
 }
+
 .strong_container{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top:2%;
-    
 }
 
 .strong{
@@ -53,23 +71,20 @@ app-navbar{
     flex-direction: column;
     justify-content: center;
     padding-top:1.5%;
-    background-color: #EBEBEB;
     border-radius: 10px;
-    width: 40%;
+    width: 85%;
     align-items: center;
-
-    
 }
-    
+
 .strong_content{
-    background-color:#4E5D6C;
+    background-color:lightgrey;
     width:90%;
     border-radius: 10px;
     align-items: center;
-    padding:1% 5%;
-    
+    padding-top:1%;
+    padding-right:5%; 
     margin-bottom: 3%;
-    
+    opacity: .65;
 }
 
 li{
@@ -80,8 +95,10 @@ li{
 
 i{
     font-size: 2em;
-    color:#EBEBEB;
+    color:black;
+    font-weight: 600;
 }
+
 .jump{
     display:flex;
     flex-direction: column;
@@ -89,10 +106,16 @@ i{
     align-items: center;
     padding-top:2em;
 }
+
 .jump_content{
     width:45%;
     text-align: center;
+    
 }
+.jump_content h5{
+    color:white;
+}
+
 .assessment{
     display:flex;
     flex-direction: column;
@@ -135,13 +158,13 @@ i{
     
     .strong{
     width:90%;
-    
     }
     
    .jump_content{
     width:80%;
     padding-top:1.5%;
     }
+
     #jumbo{
     padding-top:5em;
     }
@@ -155,7 +178,7 @@ and (-webkit-min-device-pixel-ratio: 2){
 
     .mtg_content h2{
         font-size:2.8em ;
-       }
+    }
 
     .mtg_content{
         width:60%;
@@ -165,20 +188,45 @@ and (-webkit-min-device-pixel-ratio: 2){
     .pastor_content p{
         font-size: 1em;
     }
+
     .landing_content{
         width:75%;
     }
+
     .strong_content{
         margin-right:0em;
     }
+
     .strong{
         width:60%;
-        
     }
+}
+/*Desktop*/
+@media only screen  and (min-width : 1024px){
+    
+  
+}
 
+/* Large Screens */
+@media only screen  and (min-width : 1440px){
+    
+    
+}
+
+/*4k*/
+/* Large screens */
+@media only screen  and (min-width : 1824px){
+
+   
+    
+    .strong_content{
+        padding-left:9%;
+    }
+    
 
 
 
 
 
 }
+        
