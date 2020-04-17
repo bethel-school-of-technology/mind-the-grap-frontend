@@ -36,9 +36,11 @@ export class DashboardComponent implements OnInit {
         var assessment_id = data.assessment_id;
         var user_id = data.user_id;
         this.resultService.getResults(assessment_id, user_id).subscribe((result) => {
+          // console.log('get result user id');
+          // console.log(user_id);
           if (result != "No Assessment Taken") {
-            console.log("result:");
-            console.log(result);
+            // console.log("result:");
+            // console.log(result);
             this.result = result;
            
             // this.result = "Assessment Not Taken";
