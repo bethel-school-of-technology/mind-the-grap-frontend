@@ -45,9 +45,18 @@ export class ApiService {
   }
 // Update USER
   updateUser(userData): Observable<any> {
-    let url = `${this.endpoint}/profile_edit/` + this.getUserId();
+    console.log("Got User Data");
     console.log(userData);
-    return this.http.put(url, userData);
+
+    var formattedData = {
+      "first_name": userData.first_name,
+      "last_name": userData.last_name,
+      "email": userData.email
+    }
+
+    let url = `${this.endpoint}/profile_edit/` + this.getUserId();
+    // console.log(userData);
+    return this.http.put(url, formattedData);
     
   }
 

@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { ApiService } from 'src/app/service/api.service';
 import { Location } from '@angular/common';
 import { User } from '../../models/user';
-import { FormGroup, FormBuilder} from '@angular/forms';
+import { FormsModule, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 
@@ -28,18 +28,22 @@ export class ProfileEditComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getUser();
   }
 
-  onSubmit() {
-    console.log('Your updated information : ', this.model);
-    console.log(this.model );
-    this.apiService.updateUser(this.model).subscribe((res: Response) => { this.router.navigate(['/profile']);
+  getUser(){
+    this.apiService.getUser().subscribe((data) => {
+      this.model = data;
+    })
+  }
+
+  onSubmit(f) {
+    // console.log('Your updated information: ');
+    // console.log(f.value);
+    this.apiService.updateUser(f.value).subscribe((res: Response) => { 
+      // console.log("Got Here:");
+      // console.log(this.model._id);  
+      this.router.navigate(['/profile/'+ this.model._id]);
       });
      }
-
-//OLD onSubmit logic 
-//   onSubmit() {
-//     console.log('Update Successful: ', this.model);
-// }
-
 };
