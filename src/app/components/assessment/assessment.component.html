@@ -2,16 +2,18 @@
 
 <!-- End of Navbar -->
 <div style="padding:2em;">
-    <p>assessment works!</p>
+    <h1>Available Assessments:</h1>
 
 
       <div class="card">
         <div class="results">
           <div *ngFor="let assessment of assessments">
           <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 10px;">
-            <div class="card-header">{{assessment.title}}</div>
+            <div class="card-header">
+              <h3>{{assessment.title}}</h3>
+            </div>
             <div class="card-body">
-              <h4 class="card-title">Description</h4>
+              <h4 class="card-title">Description:</h4>
               <p class="card-text">{{assessment.description}}</p>
               <div class="center">
                 <a [routerLink]="['/assessments', assessment.title]" class="status-btn">Not Started</a>
