@@ -4,16 +4,19 @@ form div {
     padding-left: 10%;
     padding-right: 10%;
 }
+
 input{
     border-radius: 5px;
 }
+
 #update{
     border-radius: 5px;
 }
+
 form{
     margin-bottom: 50px;
-    
 }
+
 .container{
     background-color: darkgray;
     width: 45%;
@@ -21,11 +24,12 @@ form{
     padding-bottom: 8px;
     padding-top:8px;
     margin-top:50px;
-    
 }
+
 input::placeholder { 
     text-align: center;
 }
+
 label{
     font-weight: 900;
 }
@@ -35,12 +39,7 @@ label{
  @media only screen 
  and (max-device-width: 425px){
 
-.container{
-    width:80%;
-
+    .container{
+        width:80%;
+    }
 }
-
-
-
-
- }
