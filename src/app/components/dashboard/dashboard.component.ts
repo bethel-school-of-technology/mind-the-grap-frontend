@@ -40,6 +40,7 @@ export class DashboardComponent implements OnInit {
             console.log("result:");
             console.log(result);
             this.result = result;
+           
             // this.result = "Assessment Not Taken";
           }
         });

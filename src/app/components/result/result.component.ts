@@ -26,7 +26,7 @@ export class ResultComponent implements OnInit {
   ) { }
 
   
-
+// get results with the assessment id and th user id 
   getResults(assessment_id){
     var user_id = this.apiService.getUserId();
     this.resultService.getResults(assessment_id, user_id).subscribe((data) => {

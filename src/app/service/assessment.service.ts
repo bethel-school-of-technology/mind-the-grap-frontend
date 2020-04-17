@@ -26,6 +26,10 @@ export class AssessmentService {
     return this.http.get(this.assessmentUrl + "/assessment/" + assessment_title);
   }
 
+  getAssessmentId(assessment_id) {
+    return this.http.get(this.assessmentUrl + "/" + assessment_id)
+  }
+
   // editAssessment(assessment_id): Observable<any> {
   //   const url = '/' + assessment_id
   //   console.log()
